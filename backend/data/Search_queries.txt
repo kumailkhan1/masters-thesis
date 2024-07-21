@@ -1,0 +1,51 @@
+#Specific search querys from various engineering disciplines: 
+- Design a de-icing system for turbine blades that operates without consuming electricity.
+- Engineer a hydrodynamic fuselage coating for large ocean-going tankers to decrease water resistance and enhance fuel economy.
+- Design a load-bearing composite material that exhibits a distinct color shift upon exceeding its specified load capacity.
+- Enhance a robotic vacuum cleaner with the capability ascend stairs 
+- Incorporate a device into clothing that generates electricity from the wearer's motion or body heat for charging
+- Develop fabric that dynamically alters its thermal conductivity in response to varying environmental conditions.
+- Improve the impact resistance of short fiber-reinforced composite materials.
+- Engineer a ski surface with a directional drag coefficient that increases resistance during ascents and minimizes it during descents.
+- Design a revolutionary bicycle tire concept that operates effectively without air, eliminating the risk of running flat.
+- Design a coating for buildings that can dynamically change its optical properties to regulate heat absorption and reflection based on seasonal variations.
+- Create a method to improve the durability and lifespan of asphalt roads in extreme weather conditions.
+- Develop a non-invasive method to monitor blood glucose levels in diabetic patients.
+- Design a system for recycling or converting plastic waste in the sea to reduce ocean pollution.
+- Develop an early warning system for the spread of new diseases to enhance public health response.
+- Create a shoe that significantly enhances running speed through innovative design and materials.
+- Design clothing that dynamically adapts its heat transfer coefficient in response to varying ambient temperatures.
+- Develop a thermomanagement system for battery packs in electric vehicles to optimize performance and longevity.
+- Engineer a high-stiffness, high-strength material that allows for targeted escape of flames in the event of a fire.
+- Create a fast manufacturing process for microscopically complex geometrical structures without using 3D printing.
+- Enhance sunblock formulations to provide longer-lasting protection against UV radiation.
+- Develop a route planning algorithm for delivery trucks to find the optimal route, minimizing time and fuel consumption.
+- Design a system for reducing mechanical wear in industrial machinery operating in salty or saltwater environments.
+
+#General search for innovation potential in a specific area:
+Show me a discovery in nature that has the potential for innovation in the field of 
+- civil engineering
+- thermo management of buildings 
+- Coatings
+- Energy efficient manufacturing engineering
+- Leigthweight Materials
+- Robotics
+- Wear and Friction
+
+#Search querys where the algorithm should not find anything relevant:
+-Design a perpetuum mobile machine that can operate indefinitely without any energy input.
+-Develop a time machine that allows for travel both into the past and the future.
+-Create a teleportation device that instantly transports objects or people from one location to another without any loss of information or matter.
+-Engineer an anti-gravity device that completely negates the effects of gravity on an object, allowing it to float freely in the air.
+-Design a device that can exchange information faster than the speed of light.
+
+#Search querys that should be related to already knwon biomimetic inventions: 
+- Design a self-cleaning surface for outdoor equipment that repels dirt and water effectively. --> Lotus Effect
+- Develop a robotic gripper that adapts to the shape of objects for a secure and gentle grip. --> Finray Effect
+- Create a surface coating that reduces drag and enhance buoyancy for boats. --> Salvinia Effect
+- Design a reusable fastening system that can quickly and securely attach and detach fabric materials. --> Velcro Fastener
+- Engineer an adhesive material that can stick to various surfaces repeatedly without losing its stickiness. --> Gecko Tape
+
+Categories
+Advancement --> Product becomes superior due to innovative biomimicri concept
+New development --> Unknown principle from nature is adapted for completely new functionality
