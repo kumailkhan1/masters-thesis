@@ -14,11 +14,13 @@ QUERY_GEN_PROMPT = """
 """
 
 QA_PROMPT = """
-Context information is below.
+
+Based solely on the context information provided below, answer the query. Do not include prior knowledge or unrelated information. 
+Ensure the answer is concise and directly addresses the query, ideally within 5-600 words.
+Context:
 ---------------------
 {context_str}
 ---------------------
-Given the context information and not prior knowledge, answer the query.
 Query: {query_str}
 Answer: \
 
@@ -27,13 +29,11 @@ Answer: \
 REFINE_PROMPT = """\
 The original query is as follows: {query_str}
 We have provided an existing answer: {existing_answer}
-We have the opportunity to refine the existing answer 
-(only if needed) with some more context below. 
+Refine the existing answer using the new context provided below. 
+Only refine if the context adds significant value; otherwise, keep the original answer. 
+The final answer should be concise, strictly up to 5-600 words, and free from any inaccuracies or unrelated information.
 ------------
 {context_str}
 ------------
-Given the new context, refine the original answer to better answer the query. 
-If the context isn't useful, return the original answer. The final answer should be comprehensive and in-depth. 
-It can go up to 5-600 words if there is enough context there to write on.
 Refined Answer: 
 """
