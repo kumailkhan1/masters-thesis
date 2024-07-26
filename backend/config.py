@@ -30,8 +30,10 @@ REFINE_PROMPT = """\
 The original query is as follows: {query_str}
 We have provided an existing answer: {existing_answer}
 Refine the existing answer using the new context provided below. 
-Only refine if the context adds significant value; otherwise, keep the original answer. 
-The final answer should be concise, strictly up to 5-600 words, and free from any inaccuracies or unrelated information.
+Only refine, extend or change the answer if the context adds significant value; otherwise, keep the original answer. 
+Do not mention in the response that the answer has been refined with additional context. The final refined answer must be a stand-alone answer.
+The final answer should be concise, roughly 6-700 words but not more than 800 words, and free from any inaccuracies or unrelated information.
+Do not include prior knowledge or unrelated information and also do not cite sources outside the given context.
 ------------
 {context_str}
 ------------

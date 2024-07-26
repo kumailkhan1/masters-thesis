@@ -116,8 +116,8 @@ class FusionRetriever(BaseRetriever):
 
     def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
         print("Insiude _retrieve")
-        if(notself.generate_queries_flag):
-            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
+        if(not self.generate_queries_flag):
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
             print(queries)
         results =  asyncio.run(self.run_queries(queries, self._retrievers))
         final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
@@ -129,7 +129,7 @@ class FusionRetriever(BaseRetriever):
         
         if(self.generate_queries_flag):
             # Generate additional queries with the help of llm
-            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
             print(queries)
             results =  await self.run_queries(queries, self._retrievers)
             final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
@@ -171,7 +171,7 @@ async def query_llm(query_str):
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10)
 
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = False)
+        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = True)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
     qa_prompt = PromptTemplate(config.QA_PROMPT)

@@ -9,6 +9,8 @@ import os
 from dotenv import load_dotenv
 from tonic_validate.services.openai_service import OpenAIService
 
+import tiktoken
+
 # Load environment variables from .env file
 load_dotenv()
 # MongoDB setup
@@ -28,14 +30,15 @@ async def store_and_upload_results(query, response, retrieved_nodes):
         ]
         
         print("--->Data ready...")
-
-        openai_service = OpenAIService(model="gpt-4o-mini")
+        # Initialize the encoder for the model
+        encoder = tiktoken.encoding_for_model("gpt-4o")
+        openai_service = OpenAIService(model="gpt-4o",encoder=encoder)
         # Individual metric evaluations
         metrics = {
-            "answer_consistency": AnswerConsistencyEvaluator(),         #whether the answer has information that does not appear in the retrieved context
-            "augmentation_accuracy": AugmentationAccuracyEvaluator(),   #measeures the percentage of the retrieved context that is in the answer
-            "augmentation_precision": AugmentationPrecisionEvaluator(), #measures whether the relevant retrieved context makes it into the answer
-            "retrieval_precision": RetrievalPrecisionEvaluator()        #measures the percentage of retrieved context is relevant to answer the question
+            "answer_consistency": AnswerConsistencyEvaluator(openai_service),         #whether the answer has information that does not appear in the retrieved context
+            "augmentation_accuracy": AugmentationAccuracyEvaluator(openai_service),   #measeures the percentage of the retrieved context that is in the answer
+            "augmentation_precision": AugmentationPrecisionEvaluator(openai_service), #measures whether the relevant retrieved context makes it into the answer
+            "retrieval_precision": RetrievalPrecisionEvaluator(openai_service)        #measures the percentage of retrieved context is relevant to answer the question
         }
         scores = {}
         run_data_list = []
