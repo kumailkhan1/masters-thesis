@@ -16,6 +16,7 @@ from typing import List
 from tqdm.asyncio import tqdm
 import pandas as pd
 
+from evaluation import store_and_upload_results
 import config
 
 import asyncio
@@ -90,11 +91,13 @@ class FusionRetriever(BaseRetriever):
         query_gen_prompt,
         retrievers: List[BaseRetriever],
         similarity_top_k: int = 2,
+        generate_queries_flag = True
     ) -> None:
         self._retrievers = retrievers
         self._similarity_top_k = similarity_top_k
         self._llm = llm
         self.query_gen_prompt = query_gen_prompt
+        self.generate_queries_flag = generate_queries_flag
         super().__init__()
         
     async def run_queries(self,queries, retrievers):
@@ -113,18 +116,28 @@ class FusionRetriever(BaseRetriever):
 
     def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
         print("Insiude _retrieve")
-        queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
-        print(queries)
+        if(notself.generate_queries_flag):
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
+            print(queries)
         results =  asyncio.run(self.run_queries(queries, self._retrievers))
         final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
         return final_results
     
     async def _aretrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
         print("Insiude _aretrieve")
-        queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
-        print(queries)
-        results =  await self.run_queries(queries, self._retrievers)
-        final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
+        print("Query Generation: ", self.generate_queries_flag)
+        
+        if(self.generate_queries_flag):
+            # Generate additional queries with the help of llm
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
+            print(queries)
+            results =  await self.run_queries(queries, self._retrievers)
+            final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
+        else:
+            # Only fetch documents for the main query
+            results =  await self.run_queries(query_bundle.query_str, self._retrievers)
+            final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
+       
         return final_results
 
 async def generate_response_cr(
@@ -146,7 +159,7 @@ async def generate_response_cr(
         cur_response = llm.complete(fmt_prompt)
         fmt_prompts.append(fmt_prompt)
 
-    return str(cur_response), fmt_prompts
+    return cur_response, fmt_prompts
 
 async def query_llm(query_str):
     Settings.llm = Ollama(model="mistral", request_timeout=60.0)
@@ -158,14 +171,16 @@ async def query_llm(query_str):
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10)
 
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5
-    )
+        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = False)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
     qa_prompt = PromptTemplate(config.QA_PROMPT)
     refine_prompt = PromptTemplate(config.REFINE_PROMPT)
     response, fmt_prompts = await generate_response_cr(retrieved_nodes, query_str, qa_prompt, refine_prompt, Settings.llm)
     
+    print("Running evaluation...")
+    # Store and upload evaluation results
+    await store_and_upload_results(query_str, str(response), retrieved_nodes)
     
     # Extract metadata and score from retrieved_nodes (TODO: Create sep. function)
     extracted_data = []
@@ -178,7 +193,7 @@ async def query_llm(query_str):
         })
         
     data = {
-        "response":response,
+        "response":str(response),
         "retrieved_nodes":extracted_data
     }
     return data
