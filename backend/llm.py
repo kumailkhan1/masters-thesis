@@ -16,7 +16,8 @@ from typing import List
 from tqdm.asyncio import tqdm
 import pandas as pd
 
-from evaluation import store_and_upload_results
+from evaluation.deep_eval import deep_evaluate
+from evaluation.tonic_validate import store_and_upload_results
 import config
 
 import asyncio
@@ -48,7 +49,7 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
 
     return index
 
-def generate_queries(query_gen_prompt, llm, query_str: str, num_queries: int = 6):
+def generate_queries(query_gen_prompt, llm, query_str: str, num_queries: int):
     fmt_prompt = query_gen_prompt.format(
         num_queries=num_queries - 1, query=query_str
     )
@@ -59,7 +60,9 @@ def generate_queries(query_gen_prompt, llm, query_str: str, num_queries: int = 6
     return queries
 
 def fuse_results(results_dict, similarity_top_k: int = 5):
-    k = 60.0
+    # for 4 queries total of 80 documents from both the retrievers would be returned so the max_rank would be 80
+    # settings k = max_rank so it is easier to interpret
+    k = 80.0 
     fused_scores = {}
     text_to_node = {}
 
@@ -129,7 +132,7 @@ class FusionRetriever(BaseRetriever):
         
         if(self.generate_queries_flag):
             # Generate additional queries with the help of llm
-            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
             print(queries)
             results =  await self.run_queries(queries, self._retrievers)
             final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
@@ -180,7 +183,9 @@ async def query_llm(query_str):
     
     print("Running evaluation...")
     # Store and upload evaluation results
-    await store_and_upload_results(query_str, str(response), retrieved_nodes)
+    # await store_and_upload_results(query_str, str(response), retrieved_nodes)
+    
+    await deep_evaluate(query_str,str(response),retrieved_nodes)
     
     # Extract metadata and score from retrieved_nodes (TODO: Create sep. function)
     extracted_data = []

@@ -31,8 +31,8 @@ async def store_and_upload_results(query, response, retrieved_nodes):
         
         print("--->Data ready...")
         # Initialize the encoder for the model
-        encoder = tiktoken.encoding_for_model("gpt-4o")
-        openai_service = OpenAIService(model="gpt-4o",encoder=encoder)
+        encoder = tiktoken.encoding_for_model("gpt-3.5-turbo")
+        openai_service = OpenAIService(model="gpt-3.5-turbo",encoder=encoder)
         # Individual metric evaluations
         metrics = {
             "answer_consistency": AnswerConsistencyEvaluator(openai_service),         #whether the answer has information that does not appear in the retrieved context
