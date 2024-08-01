@@ -1,11 +1,10 @@
 import asyncio
-import datetime
-from deepeval import evaluate
 from deepeval.metrics import AnswerRelevancyMetric,FaithfulnessMetric,ContextualRelevancyMetric
 from deepeval.test_case import LLMTestCase
-from pymongo import MongoClient
 # Load environment variables from .env file
 from dotenv import load_dotenv
+
+from backend.evaluation.utils.utils import save_results
 load_dotenv()
 
 EVAL_MODEL = "gpt-3.5-turbo"
@@ -71,22 +70,3 @@ async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,tab
             print(f"Error occurred: {e}")
             
             
-def save_results(query_str,response,retrieved_nodes_titles,metrics_scores,generated_queries,table_name):
-    
-    # MongoDB setup
-    client = MongoClient('mongodb://localhost:27017/')
-    db = client['llm_evaluation']
-    collection = db[table_name]
-    # Store results in MongoDB
-    result_data = {
-        "query": query_str,
-        "response": response,
-        "context_source": retrieved_nodes_titles,
-        "evaluation_scores": metrics_scores,
-        "timestamp": datetime.datetime.now(),
-        "generated_queries":generated_queries
-    }
-        
-    print("Storing results in db...")
-    collection.insert_one(result_data)
-    
