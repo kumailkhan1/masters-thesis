@@ -26,6 +26,7 @@ class RetrievedNode(BaseModel):
 class QueryResponse(BaseModel):
     response: str
     retrieved_nodes: List[RetrievedNode]
+    generated_queries:List[str]
 
 
 @app.post("/query", response_model=QueryResponse)

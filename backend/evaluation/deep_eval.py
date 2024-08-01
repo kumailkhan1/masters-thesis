@@ -10,27 +10,32 @@ load_dotenv()
 
 EVAL_MODEL = "gpt-3.5-turbo"
 
-async def deep_evaluate(query_str,response,retrieved_nodes):
+async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,table_name):
     try:
         retrieved_nodes_titles = [
                 {"title": node.node.metadata.get('Title', 'No title'), "score": node.score}
                 for node in retrieved_nodes
             ]
         retrieval_context = [node.get_content() for node in retrieved_nodes]
+        
+        # The answer relevancy metric measures the quality of your RAG pipeline's generator 
+        # by evaluating how relevant the actual_output of your LLM application is compared to the provided input
         answer_relevancy_metric = AnswerRelevancyMetric(
             threshold=0.6,
             model=EVAL_MODEL,
             include_reason=True,
             verbose_mode=True
         )
-        
+        #The faithfulness metric measures the quality of your RAG pipeline's generator by evaluating whether 
+        # the actual_output factually aligns with the contents of your retrieval_context. 
         faithfulness_metric = FaithfulnessMetric(
             threshold=0.6,
             model=EVAL_MODEL,
             include_reason=True,
             verbose_mode=True
         )
-        
+        # The contextual relevancy metric measures the quality of your RAG pipeline's retriever by evaluating 
+        # the overall relevance of the information presented in your retrieval_context for a given input
         contextual_relevancy_metric = ContextualRelevancyMetric(
             threshold=0.6,
             model=EVAL_MODEL,
@@ -59,19 +64,19 @@ async def deep_evaluate(query_str,response,retrieved_nodes):
         "contextual_relevancy": results[2],
     }
         # Save to db
-        save_results(query_str,response,retrieved_nodes_titles,metrics_scores)
+        save_results(query_str,response,retrieved_nodes_titles,metrics_scores,generated_queries,table_name)
         print(metrics_scores)
         return metrics_scores
     except Exception as e:
             print(f"Error occurred: {e}")
             
             
-def save_results(query_str,response,retrieved_nodes_titles,metrics_scores):
+def save_results(query_str,response,retrieved_nodes_titles,metrics_scores,generated_queries,table_name):
     
     # MongoDB setup
     client = MongoClient('mongodb://localhost:27017/')
     db = client['llm_evaluation']
-    collection = db['results']
+    collection = db[table_name]
     # Store results in MongoDB
     result_data = {
         "query": query_str,
@@ -79,7 +84,7 @@ def save_results(query_str,response,retrieved_nodes_titles,metrics_scores):
         "context_source": retrieved_nodes_titles,
         "evaluation_scores": metrics_scores,
         "timestamp": datetime.datetime.now(),
-        "query_generation":True
+        "generated_queries":generated_queries
     }
         
     print("Storing results in db...")

@@ -37,6 +37,7 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
     persist_index_path = os.path.join(cwd, persist_dir)
 
     if not os.path.exists(persist_index_path):
+        print("Creating an index...")
         df = pd.read_excel(data_path, header=0)
         documents = create_documents(df)
         index = VectorStoreIndex.from_documents(
@@ -44,6 +45,7 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
         )
         index.storage_context.persist(persist_dir=persist_index_path)
     else:
+        print("Loading the index from storage...")
         storage_context = StorageContext.from_defaults(persist_dir=persist_index_path)
         index = load_index_from_storage(storage_context)
 
@@ -101,6 +103,7 @@ class FusionRetriever(BaseRetriever):
         self._llm = llm
         self.query_gen_prompt = query_gen_prompt
         self.generate_queries_flag = generate_queries_flag
+        self.generated_queries = []
         super().__init__()
         
     async def run_queries(self,queries, retrievers):
@@ -120,9 +123,9 @@ class FusionRetriever(BaseRetriever):
     def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
         print("Insiude _retrieve")
         if(not self.generate_queries_flag):
-            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
-            print(queries)
-        results =  asyncio.run(self.run_queries(queries, self._retrievers))
+            self.generated_queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
+            print(self.generated_queries)
+        results =  asyncio.run(self.run_queries(self.generated_queries, self._retrievers))
         final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
         return final_results
     
@@ -133,12 +136,14 @@ class FusionRetriever(BaseRetriever):
         if(self.generate_queries_flag):
             # Generate additional queries with the help of llm
             queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
-            print(queries)
-            results =  await self.run_queries(queries, self._retrievers)
+            self.generated_queries = queries  # Store generated queries
+            print(self.generated_queries)
+            results =  await self.run_queries(self.generated_queries, self._retrievers)
             final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
         else:
-            # Only fetch documents for the main query
-            results =  await self.run_queries(query_bundle.query_str, self._retrievers)
+            queries = [query_bundle.query_str]
+            self.generated_queries = queries  # Store the main query
+            results =  await self.run_queries(self.generated_queries, self._retrievers)
             final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
        
         return final_results
@@ -181,11 +186,12 @@ async def query_llm(query_str):
     refine_prompt = PromptTemplate(config.REFINE_PROMPT)
     response, fmt_prompts = await generate_response_cr(retrieved_nodes, query_str, qa_prompt, refine_prompt, Settings.llm)
     
+    print("Generated Queries", fusion_retriever.generated_queries)
     print("Running evaluation...")
     # Store and upload evaluation results
     # await store_and_upload_results(query_str, str(response), retrieved_nodes)
     
-    await deep_evaluate(query_str,str(response),retrieved_nodes)
+    # await deep_evaluate(query_str,str(response),retrieved_nodes,fusion_retriever.generated_queries,"results")
     
     # Extract metadata and score from retrieved_nodes (TODO: Create sep. function)
     extracted_data = []
@@ -199,6 +205,7 @@ async def query_llm(query_str):
         
     data = {
         "response":str(response),
-        "retrieved_nodes":extracted_data
+        "retrieved_nodes":retrieved_nodes, #extracted_data,
+        "generated_queries":fusion_retriever.generated_queries
     }
     return data
