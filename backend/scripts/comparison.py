@@ -82,6 +82,7 @@ for paper, queries in paper_query_mapping.items():
             # 'position_without_paper': without_paper_position
         })
 
+
 # Convert the results to a DataFrame
 df_results = pd.DataFrame(results)
 
