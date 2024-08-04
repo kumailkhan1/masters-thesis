@@ -4,7 +4,7 @@ from deepeval.test_case import LLMTestCase
 # Load environment variables from .env file
 from dotenv import load_dotenv
 
-from backend.evaluation.utils.utils import save_results
+from evaluation.utils.utils import save_results
 load_dotenv()
 
 EVAL_MODEL = "gpt-3.5-turbo"
@@ -53,9 +53,9 @@ async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,tab
         )
         print("Running Metrics...")
         results = await asyncio.gather(
-            answer_relevancy_metric.a_measure(without_context_test_case,_show_indicator=False),
-            faithfulness_metric.a_measure(with_context_test_case,_show_indicator=False),
-            contextual_relevancy_metric.a_measure(with_context_test_case,_show_indicator=False)
+            answer_relevancy_metric.a_measure(without_context_test_case),
+            faithfulness_metric.a_measure(with_context_test_case),
+            contextual_relevancy_metric.a_measure(with_context_test_case)
         )
         metrics_scores = {
         "answer_relevancy": results[0],

@@ -18,7 +18,7 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client['llm_evaluation']
 collection = db['results']
 
-async def store_and_upload_results(query, response, retrieved_nodes):
+async def tonic_evaluate(query, response, retrieved_nodes):
     print("--->Inside evaluation...")
 
     try:

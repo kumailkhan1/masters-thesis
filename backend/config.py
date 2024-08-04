@@ -1,7 +1,7 @@
 import os
 
-PERSIST_DIR = "persisted_index"
-DATA_DIR = "data/240605_001_relevant_scopusdata.xlsx"
+PERSIST_DIR = "persisted_index_random_papers_experiment"
+DATA_DIR = "data/random_papers_experiment.csv"
 QUERY_GEN_PROMPT = """
     You are assisting in generating multiple search queries tailored for a RAG system focused on translating technological concept search queries into biomimicry or biologically specific language. 
     Convert the following technical query into concise biomimicry or biological queries, using keywords or key concepts from the original query and their synonyms commonly found in biological publications. 

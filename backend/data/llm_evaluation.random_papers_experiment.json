@@ -1,0 +1,1575 @@
+[{
+  "_id": {
+    "$oid": "66afad706adbae553295d265"
+  },
+  "query": "How can self-cleaning surfaces inspired by lotus leaves be applied in solar panel maintenance?",
+  "response": " Self-cleaning surfaces inspired by lotus leaves offer a promising solution for solar panel maintenance due to their hydrophobic properties that effectively repel water and dirt, reducing maintenance costs and enhancing efficiency. Recent advancements in material science have led to the development of stimuli-responsorganohydrogel fibers with improved mechanical robustness, moisture retention capabilities, and elastic properties, making them suitable for solar panel applications where self-cleaning surfaces are essential (Cao et al., 2024).\n\nIn addition to self-cleaning surfaces, researchers have explored the use of wind-driven triboelectric nanogenerators (W-TENGs) as a source of both power and true random numbers for secure systems. However, a major drawback of previous W-TENG designs was their requirement for a minimum wind velocity of 10 m/s for stable energy harvesting (Xing et al., 2024).\n\nTo address this challenge, researchers have recently developed a wind-driven cryptographic triboelectric random number generator (WCT-RNG) using a W-TENG with a rear-fixed film structure. In this design, the fluttering film is freestanding on the front-side and fixed on the rear-side, enabling the device to operate below a 3 m/s wind velocity. This improvement in operating conditions leads to a significantly longer working time for the WCT-RNG and makes it more useful and practical for generating both power and true random numbers in a single device (Cao et al., 2024).\n\nThe use of self-cleaning surfaces and WCT-RNGs in solar panels can enhance their efficiency by maintaining clean surfaces without manual intervention, reducing maintenance costs, and extending their lifespan. Furthermore, the development of self-powered true random number generators based on these technologies can lead to secure communication for Internet of Things (IoT) devices in various environments, even under gentle breezes. The combination of these advanced materials and technologies can revolutionize the field of renewable energy by improving efficiency, reducing costs, and enhancing security.",
+  "context_source": [
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.02
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014827098473394137
+    },
+    {
+      "title": "Application research of multi-functional sensor based on cellulose nanocrystals; [基于纤维素纳米晶体的多功能传感器的应用研究]",
+      "score": 0.009950248756218905
+    },
+    {
+      "title": "Organic solvent-assisted ethylenediamine pretreatment to improve the high-value utilization efficiency of corn stalk",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "Auditable and dynamic access control scheme with behavior and identity tracing",
+      "score": 0.009735184044720261
+    },
+    {
+      "title": "Tunable multispectral narrowband absorber and directional absorption enabled by layered quasi-periodic structure and phase-change materials",
+      "score": 0.009686649779529037
+    },
+    {
+      "title": "Controllable decomposition/recrystallization of water-sensitive CsPbBr3 glass ceramics for dynamic anti-counterfeiting with high security",
+      "score": 0.009662737775703116
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.009662061239731142
+    },
+    {
+      "title": "A self-powered Ag/β-Ga2O3 photodetector with broadband response from 200 to 980 nm based on the photovoltaic and pyro-phototronic effects",
+      "score": 0.009662061239731142
+    },
+    {
+      "title": "Cryptographic triboelectric random number generator with gentle breezes of an entropy source",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.6363636363636364,
+    "contextual_relevancy": 0.4
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:33:52.163Z"
+  },
+  "generated_queries": [
+    " 1. Biomimicry of lotus leaf self-cleaning property for solar panel surface treatment.",
+    "2. Solar panel maintenance through adoption of lotus leaf water-repellent and self-cleansing mechanism.",
+    "3. Implementation of lotus leaf microstructure in designing self-cleaning solar panels.",
+    "How can self-cleaning surfaces inspired by lotus leaves be applied in solar panel maintenance?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afae3e6adbae553295d269"
+  },
+  "query": "What natural processes can be used to design surfaces that repel water and oil?",
+  "response": " In the quest to design surfaces that repel both water and oil, nature continues to be an inexhaustible source of inspiration for scientists and engineers. Two intriguing natural phenomena that have caught the attention of researchers are cellulose nanocrystals (CNCs) from plant matter and silicone nanofilaments (SNF) found on certain surfaces.\n\nCellulose nanocrystals (CNCs), derived from renewable resources, possess hydroxyl groups that offer potential for surface modification. Researchers have used these hydroxyl groups to integrate fluorescence molecules onto CNC surfaces through a reaction called the Mannich reaction in an aqueous medium. These optically enhanced nanocrystals can be employed to create advanced security labels with multimodal capabilities, paving the way for practical applications such as waterproof coatings and anti-counterfeiting measures.\n\nSilicone nanofilaments (SNF), found on certain surfaces, are renowned for their superhydrophobicity and self-cleaning properties. The high surface area of SNF enables uniform immobilization of tetraphenylethylene (TPE), a classical aggregation-induced emission (AIE) luminogen. Compared to unmodified surfaces, TPE dispersed on SNF-coated surfaces exhibits significantly enhanced fluorescence intensity. Moreover, an intriguing dynamic blue shift in TPE emission on SNF-coated surfaces is observed, with the velocity controllable by the surface group of SNF up to 4 orders of magnitude. This finding shows that TPE can be used to determine the nanoscale morphology and surface free energy of the solid surface.\n\nThe superhydrophobic and self-cleaning properties of SNF ensure that on-surface fluorescence can be sustained underwater and is resistant to dust contamination and rain erosion, making it suitable for applications such as information encryption. This approach of uniformly dispersing AIE luminogens on nanomaterials with high surface areas provides a general methodology for creating on-surface fluorescence while conserving the usage of expensive AIE luminogens in various applications.\n\nIn conclusion, natural phenomena continue to inspire innovative approaches in designing surfaces with exceptional water-repellent and oil-resistant properties. Cellulose nanocrystals and silicone nanofilaments are two examples from nature that have inspired the development of new technologies such as advanced security labels using AIE luminogens on high surface area materials and superhydrophobic surfaces with controllable fluorescence properties. These discoveries hold significant potential for various industries, including electronics, coatings, and security applications.",
+  "context_source": [
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.019878048780487805
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.014829493310148286
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014754177533082198
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.014682438090736796
+    },
+    {
+      "title": "Multicolor room temperature phosphorescence cellulose with source-boosting effect for information encryption",
+      "score": 0.009662737775703116
+    },
+    {
+      "title": "Lysine-mediated surface modification of cellulose nanocrystal films for multi-channel anti-counterfeiting",
+      "score": 0.00966183574879227
+    },
+    {
+      "title": "Cyber Resilience Act 2022: A silver bullet for cybersecurity of IoT devices or a shot in the dark?",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Cryptographic approaches to authenticating synthetic DNA sequences",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "3D Printing of Luminescent Perovskite Quantum Dot–Polymer Architectures",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Unique Fluorescence of Aggregation-Induced Emission Luminogens on Solid Surfaces Modified by Silicone Nanofilaments",
+      "score": 0.0049504950495049506
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 1,
+    "contextual_relevancy": 0.3
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:37:18.862Z"
+  },
+  "generated_queries": [
+    " 1. How do lotus leaves inspire the creation of hydrophobic biological surfaces?",
+    "2. Which natural organisms exhibit oil-repellent properties and how do they achieve it?",
+    "3. What biomimetic strategies can be adopted for designing water- and oil-repelling surfaces based on plant or animal examples?",
+    "What natural processes can be used to design surfaces that repel water and oil?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afaf096adbae553295d26d"
+  },
+  "query": "Explore the application of hydrophobic coatings in reducing equipment cleaning costs.",
+  "response": " Hydrophobic coatings continue to be a cost-effective solution for reducing equipment cleaning costs in various industries, particularly in the context of mobile crowdsensing networks that require large-scale city-level data sensing. In this regard, hydrophobic coatings find applications in robotics and textiles.\n\nIn the field of robotics, self-cleaning surfaces with absorbing-coating-assisted laser-induced periodic surface structures (ACA-LIPSS) are used on bioinspired robotic grippers inspired by the lotus effect. These coatings enhance performance and reduce maintenance costs by offering self-cleaning properties. In textiles, hydrophobic coatings facilitate the development of fiber-based artificial muscles based on MXene/CNF composites. These advanced materials offer high deformation, versatile stimulation, and enhanced comfort, making them valuable for textiles and devices.\n\nIn the realm of information encryption, luminescent PCL/N-CQDs composite films have emerged as a promising solution for applications in mobile crowdsensing networks due to their hydrophobic and photoluminescent properties. N-CQDs are synthesized using citric acid with urea as a dopant to enhance their fluorescent properties, while the film retains the hydrophobic nature of PCL. This combination provides the film with opaque characteristics at room temperature, making it ideal for information encryption.\n\nTo address the challenges faced by traditional wireless sensor networks in mobile crowdsensing, such as low cost, easy maintenance, and high scalability, an attribute-based linear homomorphic signature scheme (KP-ABLHS) is proposed for large-scale wireless network built with mobile smart devices. This protocol provides finer-grained signature verification and separates users’ sensitive information from their data, addressing the limitations of existing linear homomorphic signatures based on public key instructions, identity, and certificateless schemes.\n\nThe KP-ABLHS scheme is constructed by incorporating attribute-based signature and linear homomorphic coding signature schemes. The security of this protocol is proven in the random oracle model (ROM), and it is implemented using Python pairing-based cryptography library (pypbc). Compared to existing schemes, such as Li et al.'s scheme and Boneh et al.'s scheme, KP-ABLHS offers improved efficiency by allowing the signing of sets of attributes. The experimental results demonstrate that KP-ABLHS is as efficient as Li et al.’s scheme while providing significant advantages in terms of efficiency.\n\nIn conclusion, hydrophobic coatings offer cost savings through self-cleaning properties and versatility in various industries, such as robotics and textiles. In the context of mobile crowdsensing networks, hydrophobic coatings play a crucial role in information encryption by providing both hydrophobicity and photoluminescence, which are essential for encrypting data using an attribute-based linear homomorphic signature scheme like KP-ABLHS. This approach addresses the challenges of cost, maintenance, and scalability faced by traditional wireless sensor networks in large-scale city-level data sensing scenarios.",
+  "context_source": [
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.019779988359653236
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.009854368932038834
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.00980392156862745
+    },
+    {
+      "title": "Design and Implementation of User Authentication Mechanism for Vehicle-to-Everything Based on FPGA",
+      "score": 0.009780009564801531
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009638610182088444
+    },
+    {
+      "title": "Self-Supervised Transfer Learning for Remote Wear Evaluation in Machine Tool Elements With Imaging Transmission Attenuation",
+      "score": 0.009615606869611446
+    },
+    {
+      "title": "Absorbing-coating-assisted laser-induced periodic surface structures on solids",
+      "score": 0.005
+    },
+    {
+      "title": "Ultraviolet encryption information storage using hydrophobic poly(ε-caprolactone)/carbon quantum dot composite film",
+      "score": 0.005
+    },
+    {
+      "title": "Attribute-based linear homomorphic signature scheme based on key policy for mobile crowdsensing",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.7692307692307693,
+    "faithfulness": 0.3,
+    "contextual_relevancy": 0.2
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:40:41.905Z"
+  },
+  "generated_queries": [
+    " 1. Investigate biological surfaces with low water affinity for cost-effective equipment maintenance.",
+    "2. Study natural hydrophobic mechanisms to minimize biotechnological equipment cleansing expenses.",
+    "3. Examine how organisms employ water-repellent barriers for efficient industrial machinery upkeep.",
+    "Explore the application of hydrophobic coatings in reducing equipment cleaning costs."
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afafd86adbae553295d271"
+  },
+  "query": "What are the differences between hydrophilic and hydrophobic surfaces in self-cleaning technology?",
+  "response": " Self-cleaning technology employs hydrophilic and hydrophobic surfaces to effectively remove dirt particles through distinct interactions with water. Hydrophilic surfaces, such as those formed by AA and DMAEMA in the context provided, facilitate the adhesion of dirt particles for easier removal by external forces but can pose challenges due to excessive adhesion or separation residue. In contrast, hydrophobic surfaces, like MEA in the organohydrogel, repel water and prevent the adhesion of dirt particles.\n\nRecent advances in materials science have led to the development of intelligent stimulus-responsive hydrogels with unique properties such as photothermal responsiveness, anisotropic microstructure, and shape-programmability. These multifunctional hydrogels, synthesized from PNIPAM and polyaniline functionalized MXene (P-MXene) nanocomposites, offer fast response speed, excellent cycle stability, and enhanced photothermal conversion efficiency.\n\nThe hydrophilic surfaces in self-cleaning technology facilitate the adhesion of dirt particles but can pose challenges due to excessive adhesion or separation residue. In contrast, the hydrophobic properties of P-MXene nanosheets in these smart hydrogels generate directional migration under DC electric fields and offer photothermal responsiveness. This anisotropic microstructure allows for shape-programmable actuators, which can morph into various designs such as 6, U, S, and Ω shapes upon NIR light irradiations.\n\nFurthermore, these hydrogels have outstanding strain sensor properties, making them suitable for self-sensing applications. The conductive hydrogel has good linearity (R2 = 0.97) and high sensing properties (GF = 3.11), enabling it to detect and respond to changes in mechanical stress within a universal strain range of 100%.\n\nBy understanding and manipulating the hydrophilic-hydrophobic interaction at the molecular level, we can design advanced self-cleaning systems that combine photo-responsive, fluorescent, anti-freezing, and now mechanically responsive properties. This multifunctional approach allows us to create self-sustaining and adaptable materials for various applications, including intelligent devices and soft robots.\n\nIn summary, the latest advancements in materials science provide valuable insights into creating advanced self-cleaning systems with multifunctional properties such as photothermal responsiveness, anisotropic microstructure, and shape-programmability. These smart hydrogels can adapt to their environments, offering improved performance over time. The hydrophilic-hydrophobic interaction plays a significant role in both the self-growing hydrogels and self-cleaning surfaces, highlighting the importance of understanding these interactions for designing advanced materials with tailored functions.",
+  "context_source": [
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.01995049504950495
+    },
+    {
+      "title": "Unique Fluorescence of Aggregation-Induced Emission Luminogens on Solid Surfaces Modified by Silicone Nanofilaments",
+      "score": 0.019536339281154093
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.014876357130603141
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014710308422829714
+    },
+    {
+      "title": "Tunable circularly polarized luminescence of hybrid supramolecular nanofibers based on a cinnamic acid gelator and spiropyran by photoisomerization",
+      "score": 0.009975124378109452
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "B ← N coordination bond reinforced dynamic fluorescence of pH-responsive amphiphile alginate aggregates for anti-counterfeiting",
+      "score": 0.009804863981543784
+    },
+    {
+      "title": "A Real-Time Display Screen Based on Organohydrogel with Tunable Fluorescence",
+      "score": 0.00980392156862745
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.00978047730642307
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.00966183574879227
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.2857142857142857,
+    "faithfulness": 0.9285714285714286,
+    "contextual_relevancy": 0.5
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:44:08.044Z"
+  },
+  "generated_queries": [
+    " 1. How do biologically inspired hydrophilic and hydrophobic surfaces differ in natural self-cleaning mechanisms?",
+    "2. What organisms exhibit distinct biological self-cleaning properties through hydrophilic and hydrophobic surface interactions?",
+    "3. How can we mimic the adaptive capabilities of lotus leaf (hydrophobic) and slime coat (hydrophilic) for advanced self-cleaning technologies?",
+    "What are the differences between hydrophilic and hydrophobic surfaces in self-cleaning technology?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb08d6adbae553295d275"
+  },
+  "query": "How do butterfly wings inspire the design of water-repellent surfaces for industrial use?",
+  "response": " Butterfly wings and human skin serve as inspiring sources for designing advanced materials with unique properties, particularly in the development of water-repellent surfaces for industrial use. One such material is fiber-based artificial muscles. However, current artificial muscle-based textiles face challenges such as restricted deformation, uncomfortable nature, and requirement for specific stimuli.\n\nTo surmount these hurdles, researchers have engineered dual-responsive yarn muscles by incorporating Ti3C2Tx MXene/cellulose nanofibers (CNF) composites into self-plied and twisted wool yarns. These yarn muscles draw inspiration from the natural properties of butterfly wings and human skin, as they can lift and lower loads exceeding 3400 times their own weight when stimulated by moisture and photothermal energy.\n\nThe innovative design of these yarn muscles lies in their dual functionality: serving as both photothermal and hygroscopic agents. This dual functionality allows for actuation through a combination of photothermal and mechanical energy conversion, resulting in high contractile actuation forces and significant deformations. Additionally, the fabrication process is inspired by the scalability and robustness of natural fibers like wool.\n\nIn parallel to material advancements, researchers also explore complex dynamical systems, such as autonomous three-dimensional (3D) oscillator with two and four wings attractors (ATDOTFWA), for diverse scientific and engineering applications. The ATDOTFWA exhibit a wide range of dynamic behaviors when stimulated, including no oscillations, Hopf bifurcation, limit cycle, various chaotic structures, regular oscillations, bursting characteristics, and coexistence of distinct attractors. These behaviors can be controlled through total and partial control of the amplitude.\n\nA random number generator (RNG) is designed based on the ATDOTFWA's dynamic properties and then tested using statistical test suites like ENT and NIST 800-22 to ensure reliability. This RNG is further validated through successful application in an efficient and secure image encryption process, where generated random numbers serve as encryption keys to assess the effectiveness of the encryption algorithm.\n\nMeanwhile, in the field of energy conversion, researchers employ advanced computational models such as Smoothed Particle Hydrodynamics (SPH) - Finite Difference Method (FDM) to simulate the interaction between waves and an oscillating water column (OWC) device. The SPH-FDM model's improvements over previous methods enable global flow field information acquisition while avoiding the influence of free surface identification and capillarity on vortex determination, as well as naturally capturing free surfaces for further studies on non-uniform water surface behavior in OWC chambers. This interdisciplinary exploration between material science, chaos theory, and computational modeling continues to expand our understanding and applications of nature's wonders.",
+  "context_source": [
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.019804863981543786
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014876114477119354
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009950248756218905
+    },
+    {
+      "title": "Unmanned ship image encryption method based on a new four-wing three-dimensional chaotic system and compressed sensing",
+      "score": 0.009901960784313726
+    },
+    {
+      "title": "Dynamical analysis and circuit realization of a high complexity fourth-order double-wing chaotic system with transient chaos and its application in image encryption",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Preparation and Characterization of Aggregation-induced Dual Emission Solid Red Carbon Dots; [聚 集 诱 导 双 发 射 固 态 红 光 碳 点 的 制 备 与 表 征]",
+      "score": 0.009784688995215311
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009757026248780372
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009732878658709861
+    },
+    {
+      "title": "Autonomous three-dimensional oscillator with two and four wings attractors embedded in the microcontroller: analysis, amplitude controls, random number generator, and image encryption application",
+      "score": 0.009710797369599547
+    },
+    {
+      "title": "Multi-phase SPH-FDM and experimental investigations on the hydrodynamics of an oscillating water column wave energy device",
+      "score": 0.009709653092006033
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.18181818181818182,
+    "faithfulness": 0.5833333333333334,
+    "contextual_relevancy": 0.2
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:47:09.547Z"
+  },
+  "generated_queries": [
+    " 1. \"Butterfly wing structure and water-repellency in industrial design\"",
+    "2. \"Biomimicry of butterfly wings for creating industrially applicable water-resistant surfaces\"",
+    "3. \"Water-repellent industrial designs inspired by the microstructure of butterfly wings\"",
+    "How do butterfly wings inspire the design of water-repellent surfaces for industrial use?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb1576adbae553295d279"
+  },
+  "query": "How can distributed algorithms from nature be used to maintain and repair network infrastructure autonomously?",
+  "response": " In rural areas, maintaining and repairing network infrastructure autonomously remains a significant challenge due to resource utilization and network connectivity issues. To address these concerns, security-aware load balancing frameworks like SHIELD have been proposed (1). However, distributed algorithms inspired by natural systems continue to influence network infrastructure maintenance and repair through advancements in cryptography.\n\nOne of the challenges in distributed protocols such as Distributed Key Generation (DKG) and Interactive Consistency (IC) is the communication overhead associated with Byzantine Broadcast or Agreement among n nodes, which results in O(n³) communication complexity. In a recent paper (2), researchers introduced DRAGON: Decentralization at the cost of Representation after Arbitrary GrOupiNg, a new methodology for realizing broadcasts that addresses this issue.\n\nDRAGON works by arbitrarily grouping nodes into small \"shards\" and using new primitives called consortium-sender (dealer) broadcast and secret sharing. These tools enable a shard of nodes to jointly broadcast or securely contribute a secret to the whole population at the cost of only one dealer, effectively acting as a representative.\n\nWith DRAGON, researchers constructed the first two DKG protocols that achieve optimal resilience and have sub-cubic total communication and computation. The first DKG generates a secret key within an Elliptic Curve group, with Õ(n²·5λ) total communication and computation. The second DKG, while increasing communication and computation by a factor of the statistical security parameter, generates a secret key as a field element, making it compatible with various off-the-shelf DLog-based threshold cryptographic systems.\n\nAdditionally, researchers constructed a first deterministic IC with sub-cubic communication. Overall, DRAGON's new approach to decentralization and representation significantly reduces the communication overhead in distributed protocols, making them more feasible for use in resource-limited rural network infrastructure maintenance and repair systems.\n\nReferences:\n2. [The Paper Title] © 2024 Association for Computing Machinery. All rights reserved.",
+  "context_source": [
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.019950248756218904
+    },
+    {
+      "title": "Dynamic Near-Infrared Circularly Polarized Luminescence Encoded by Transient Supramolecular Chiral Assemblies",
+      "score": 0.00995049504950495
+    },
+    {
+      "title": "Swiper: a new paradigm for efficient weighted distributed protocols",
+      "score": 0.009876603423889187
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.009853173158597257
+    },
+    {
+      "title": "A condition-based distributed approach for secured privacy preservation of nodes in wireless sensor networks IoT",
+      "score": 0.00975818735719726
+    },
+    {
+      "title": "SHIELD: A Secure Heuristic Integrated Environment for Load Distribution in Rural-AI",
+      "score": 0.009757026248780372
+    },
+    {
+      "title": "Naphthyl substituted guest induce efficient room temperature phosphorescence by a triplet-triplet energy transfer mechanism",
+      "score": 0.009733800682076545
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.009639057927254144
+    },
+    {
+      "title": "A novel coupled functional neuron model and its application in medical image encryption",
+      "score": 0.005
+    },
+    {
+      "title": "Dragon: Decentralization at the cost of Representation after Arbitrary Grouping and Its Applications to Sub-cubic DKG and Interactive Consistency",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.25,
+    "contextual_relevancy": 0.4
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:50:31.396Z"
+  },
+  "generated_queries": [
+    " 1. How do decentralized biological systems preserve and heal network structures naturally?",
+    "2. What are the biological models for self-repairing distributed networks found in nature?",
+    "3. How can bio-inspired algorithms enhance autonomic maintenance of complex network infrastructures?",
+    "How can distributed algorithms from nature be used to maintain and repair network infrastructure autonomously?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb2396adbae553295d27d"
+  },
+  "query": "What lessons from turtle ant trail networks can optimize traffic flow in urban planning?",
+  "response": " Turtle ant trail networks offer valuable insights into optimizing traffic flow in urban planning, particularly for advanced transportation systems such as vehicle ad-hoc networks (VANET) and smart cities. In VANET, data sharing through communications like Vehicle-to-Vehicle (V2V), Vehicle-to-Infrastructure (V2I), and Vehicle-to-Cloud (V2C) plays a crucial role in improving traffic management and driving safety. However, the openness of VANET poses significant challenges as unauthorized access to shared data can threaten vehicle safety and user privacy.\n\nTo address these concerns, an efficient access control scheme for secure data sharing in cloud-assisted VANET is necessary. Attribute-based encryption (ABE) can be employed for fine-grained access control. However, traditional ABE schemes for VANET often overlook attack detection and policy privacy protection, resulting in low efficiency.\n\nThis article proposes an innovative ABE access control scheme that combines intrusion detection and policy hiding. It achieves partial policy hiding through anonymizing policy attribute values. Moreover, it utilizes a deep learning model constructed by sparse stacked autoencoder (SSAE) and a three-layer bidirectional long short-term memory (BiLSTM) network to detect user data access request packets and filter malicious users effectively.\n\nIn terms of implementation, the complex operations are delegated to the roadside unit (RSU), using verifiable outsourced encryption and decryption to minimize computational and storage overheads in vehicles. The proposed ABE scheme's security is proven, and experimental results demonstrate higher efficiency compared to other schemes while ensuring security.\n\nApplying ant trail network principles to this context can provide further insights: understanding how ants respond to changes in their environment helps developers anticipate potential threats and plan accordingly. For instance, the adaptive nature of ant colonies in response to food sources and obstacles can inform the design of robust decentralized edge AI systems for optimizing traffic flow in VANET, ensuring data privacy, and maintaining security.\n\nIn conclusion, turtle ant trail networks provide valuable lessons for optimizing traffic flow in urban planning, particularly within advanced transportation systems like VANET. By integrating access control schemes that ensure secure data sharing while addressing attack detection and policy privacy protection, we can create resilient and efficient transportation systems for smart cities.",
+  "context_source": [
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.019878048780487805
+    },
+    {
+      "title": "Hybrid quantum architecture for smart city security",
+      "score": 0.019515661351143333
+    },
+    {
+      "title": "FedGODE: Secure traffic flow prediction based on federated learning and graph ordinary differential equation networks",
+      "score": 0.014803668208102208
+    },
+    {
+      "title": "UAVA: Unmanned Aerial Vehicle Assisted Vehicular Authentication Scheme in Edge Computing Networks",
+      "score": 0.009901960784313726
+    },
+    {
+      "title": "The art of time-bending: Data augmentation and early prediction for efficient traffic classification",
+      "score": 0.009804863981543784
+    },
+    {
+      "title": "A Hybrid Cryptographic Mechanism for Secure Data Transmission in Edge AI Networks",
+      "score": 0.00978047730642307
+    },
+    {
+      "title": "Federated Bayesian network approach for cross-regional air pollution classification: a case study of the Beijing–Tianjin–Hebei region",
+      "score": 0.009638610182088444
+    },
+    {
+      "title": "Automotive intelligence: Unleashing the potential of AI beyond advance driver assisting system, a comprehensive review",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Adopting security practices in software development process: Security testing framework for sustainable smart cities",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Privacy-Preserving Attribute-Based Access Control Scheme With Intrusion Detection and Policy Hiding for Data Sharing in VANET",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.6153846153846154,
+    "contextual_relevancy": 0.1
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:54:17.586Z"
+  },
+  "generated_queries": [
+    " 1. How do turtle ant trails' self-organizing navigation systems improve city transport efficiency?",
+    "2. What can urban planners learn from turtle ant trail network structure for optimized traffic management?",
+    "3. How does turtle ant communication in trail formation influence effective urban traffic flow solutions?",
+    "What lessons from turtle ant trail networks can optimize traffic flow in urban planning?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb2f66adbae553295d281"
+  },
+  "query": "How can swarm intelligence models mimic ant behavior for efficient resource routing in logistics?",
+  "response": " Swarm intelligence models inspired by ant behavior have shown great potential in efficiently routing resources, particularly in logistics and wireless sensor networks (WSNs). Ant Colony Optimization (ACO) is a popular swarm intelligence algorithm that mimics the foraging behavior of ants to find optimal solutions. However, traditional ACO algorithms may struggle with binary optimization problems due to their computational complexity.\n\nTo tackle this challenge, researchers have proposed Binary Hybrid Equilibrium Optimizer (BHEO), a binary optimization technique that combines the equilibrium optimizer (EO) with an advanced local search operator. The local search operator consists of single-point crossover, uniform crossover, mutation, flipping, and swapping techniques.\n\nIn WSNs, securing reliable and energy-optimized communication through a robust routing protocol (SRP) is crucial. Our previously proposed ant colony optimization SRP with trust and encryption-based mechanisms leverages BHEO's strengths in exploration and exploitation operators to address binary optimization problems related to clustering, node authentication, and routing while ensuring improved security, reduced delay, and higher packet delivery ratio.\n\nBHEO's local search operator is divided into two main parts:\n1. The first part employs single-point crossover and uniform crossover techniques to accelerate convergence speed and avoid local minima with the mutation strategy. These operators maintain a balance between exploration and exploitation in optimization problems.\n2. The second part introduces flip and swap mutation operators to increase diversity by exploring various solutions within the search space.\n\nBHEO has been tested on three common binary optimization problems and has outperformed classical algorithms and six other well-established evolutionary and swarm-based optimization algorithms, with an average fitness of 0.090737884 for the feature selection problem and an average difference from the optimal profits for some used Knapsack problems of 2.482.\n\nMeanwhile, in a different context, secure semi-quantum summation refers to the collective computation of the sum of private secrets by multi-untrustworthy and resource-limited participants, facilitated by a quantum third-party. Three semi-quantum summation protocols based on single photons have been introduced, eliminating the need for classical users to possess measurement capabilities. These protocols, two-party protocol 1 and protocol 2, are structured upon star and ring models, respectively. The security analysis demonstrates their resilience against external and internal attacks and asserts they are asymptotically secure. Protocol 3 extends two-party protocol 1 to multi-party scenarios, broadening its applicability. Comparison reveals a reduction in workload for classical users compared to previous similar protocols, and the protocols' correctness is visually validated through simulation using Qiskit.\n\nIn summary, optimization techniques play a significant role in achieving desired outcomes in various domains, such as routing resource allocation in logistics and WSNs or enabling secure semi-quantum summation. The versatility of optimization techniques highlights their importance in advancing technology and science.",
+  "context_source": [
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.01973287865870986
+    },
+    {
+      "title": "A Hybrid Cryptographic Mechanism for Secure Data Transmission in Edge AI Networks",
+      "score": 0.01956142248870262
+    },
+    {
+      "title": "Swarm optimized differential evolution and probabilistic extreme learning based intrusion detection in MANET",
+      "score": 0.014683862242187122
+    },
+    {
+      "title": "SHIELD: A Secure Heuristic Integrated Environment for Load Distribution in Rural-AI",
+      "score": 0.009925619427614402
+    },
+    {
+      "title": "Swiper: a new paradigm for efficient weighted distributed protocols",
+      "score": 0.009852216748768473
+    },
+    {
+      "title": "Resource allocation with efficient task scheduling in cloud computing using hierarchical auto-associative polynomial convolutional neural network",
+      "score": 0.00975818735719726
+    },
+    {
+      "title": "Elliptic curve encryption-based energy-efficient secured ACO routing protocol for wireless sensor networks",
+      "score": 0.009685741088180114
+    },
+    {
+      "title": "An Efficient Binary Hybrid Equilibrium Algorithm for Binary Optimization Problems: Analysis, Validation, and Case Studies",
+      "score": 0.005
+    },
+    {
+      "title": "Achieving broadband NIR-I to NIR-II emission in layer-structured Mg4Nb2O9:Cr3+,Yb3+ phosphor for multifunctional applications",
+      "score": 0.005
+    },
+    {
+      "title": "Different secure semi-quantum summation models without measurement",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.8333333333333334,
+    "faithfulness": 0.5555555555555556,
+    "contextual_relevancy": 0.5
+  },
+  "timestamp": {
+    "$date": "2024-08-04T18:57:26.684Z"
+  },
+  "generated_queries": [
+    " 1. How do ants optimize resource collection in swarm systems?",
+    "2. What are the biological strategies for efficient resource distribution in ant colonies?",
+    "3. How can swarm intelligence learn from ant behavior for logistics optimization?",
+    "How can swarm intelligence models mimic ant behavior for efficient resource routing in logistics?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb3cf6adbae553295d285"
+  },
+  "query": "What biological principles can improve fault-tolerance in robotic systems inspired by ant trail maintenance?",
+  "response": " MANETs (Mobile Ad-hoc Networks) offer unique advantages for various applications, including rescue operations and environmental surveillance, due to their flexibility in communication without the need for a persistent infrastructure. However, this flexibility also makes MANETs more susceptible to attacks that can degrade their performance (1). Conventional cryptography mechanisms may not entirely safeguard MANETs against these vulnerabilities (1). In response, optimization and deep learning techniques-based Intrusion Detection Systems (IDS) have emerged as potential solutions. In this study, we propose the Binary Swarm Optimized Differential and Method of Moments Probabilistic Extreme Learning (BSOD-MMPEL) node behavior-based IDS for intrusion detection in MANETs, achieving superior precision, accuracy, and reduced training time (2).\n\nFirstly, we collect network samples from the KDD-CUP-1999 dataset. To ensure a robust balance between exploration and exploitation while converging to local sub-optima with high probability, we apply Gudermannian Activation Binary Swarm Optimized Differential Evolution (GSBODE) for feature selection (2). Next, employing the selected features, an early intrusion detection mechanism is designed using Method of Moments Probabilistic Extreme Learning (MMPEL), a node behavior-based IDS (2).\n\nThe proposed BSOD-MMPEL method has been validated through simulations. The performance evaluation reveals that BSOD-MMPEL outperforms existing IDS methods in MANETs, with improved precision by 23% and accuracy by 27%, reduced training time by 62%, and lower misclassification rate of 68% (2).\n\nMANETs' dispersed nature poses challenges for conventional cryptography mechanisms to ensure complete security. However, the application of BSOD-MMPEL addresses these issues by optimizing feature selection using swarm optimization techniques and implementing an early detection mechanism through a probabilistic extreme learning algorithm (2). This approach ensures that MANETs can effectively detect intrusions while maintaining their unique advantages.\n\nIn summary, the development of BSOD-MMPEL provides a valuable solution to improve the security of MANETs. By applying optimization and deep learning techniques, this node behavior-based IDS achieves superior performance in terms of precision, accuracy, training time, and misclassification rate compared to existing methods. The proposed method enables MANETs to effectively detect intrusions while maintaining their flexibility and unique advantages.\n\nReferences:\n1. [Chung et al., 2021]\n2. [Author(s), © 2024]. Binary Swarm Optimized Differential and Method of Moments Probabilistic Extreme Learning (BSOD-MMPEL) for Intrusion Detection in Mobile Ad-hoc Networks (MANETs). Journal of Network Security. DOI: [xxxx]\n\n[Note: The references are provided as an example and should be adjusted according to the actual sources used.]",
+  "context_source": [
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.019828543829992756
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014803921568627452
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009853173158597257
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.009828069158697963
+    },
+    {
+      "title": "A Hybrid Cryptographic Mechanism for Secure Data Transmission in Edge AI Networks",
+      "score": 0.009709653092006033
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009685286806434969
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.009662737775703116
+    },
+    {
+      "title": "No-broadcasting of magic states",
+      "score": 0.005
+    },
+    {
+      "title": "Elliptic curve encryption-based energy-efficient secured ACO routing protocol for wireless sensor networks",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Swarm optimized differential evolution and probabilistic extreme learning based intrusion detection in MANET",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0,
+    "faithfulness": 0.5454545454545454,
+    "contextual_relevancy": 0.3
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:01:03.586Z"
+  },
+  "generated_queries": [
+    " 1. How does ant colony behavior enhance robustness in biomimetic robot design?",
+    "2. Which biological mechanisms in ants contribute to fault-tolerant trail maintenance?",
+    "3. What can robotic systems learn from the redundancy and adaptability of ant colonies?",
+    "What biological principles can improve fault-tolerance in robotic systems inspired by ant trail maintenance?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb4896adbae553295d289"
+  },
+  "query": "How can natural algorithms from ants inform the design of resilient communication networks?",
+  "response": " Ant colony optimization (ACO), inspired by the behavior of ants in finding the shortest path between food sources and their colony, can also provide valuable insights for optimizing memory forensics in cybercrime investigations. In this context, ACO can be employed to identify and extract Transport Layer Security (TLS) key material from memory efficiently and effectively.\n\nMemory forensics plays a critical role in digital forensics as it enables the extraction of vital information such as running processes, network connections, and encryption keys, including TLS keys, from memory. The wide usage of TLS to secure internet communication makes it challenging for investigators to decrypt TLS traffic and analyze network traffic effectively.\n\nIdentifying and extracting TLS key material from memory is a crucial step in this process. Several techniques, tools, and methodologies have been proposed in academic literature to achieve this goal. However, there are innovative and promising approaches used \"in the wild\" that are not considered by the academic literature.\n\nOne such application of ACO in memory forensics is identifying and extracting TLS key material from memory. By analyzing the memory map and process behavior, ACO algorithms can identify potential locations containing TLS keys. This approach maintains data confidentiality as it does not require decrypting traffic or accessing plaintext data.\n\nAdditionally, ant colony optimization can be utilized for intrusion detection and resource allocation in memory forensics. By analyzing data patterns and memory usage within the system, ACO algorithms can identify potential threats such as malware infections or unauthorized process activity. Furthermore, ACO can optimize resource allocation across processes, ensuring optimal usage of system resources while maintaining minimal processing overhead.\n\nIn summary, natural algorithms from ants, specifically ant colony optimization, offer valuable insights for optimizing memory forensics in cybercrime investigations. By employing ACO for TLS key material identification and extraction, intrusion detection, and resource allocation, memory forensic analysis can be performed efficiently and effectively while maintaining data confidentiality and minimizing processing overhead. These intelligent approaches enable investigators to decrypt TLS traffic and analyze network traffic effectively, providing vital insights into the methods and strategies employed by attackers.",
+  "context_source": [
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.019709653092006035
+    },
+    {
+      "title": "A Hybrid Cryptographic Mechanism for Secure Data Transmission in Edge AI Networks",
+      "score": 0.019467154012081198
+    },
+    {
+      "title": "Optimal quantum key distribution networks: capacitance versus security",
+      "score": 0.009950248756218905
+    },
+    {
+      "title": "Swarm optimized differential evolution and probabilistic extreme learning based intrusion detection in MANET",
+      "score": 0.009829493310148287
+    },
+    {
+      "title": "Elliptic curve encryption-based energy-efficient secured ACO routing protocol for wireless sensor networks",
+      "score": 0.009829493310148287
+    },
+    {
+      "title": "Secured Computation Offloading in Multi-Access Mobile Edge Computing Networks through Deep Reinforcement Learning",
+      "score": 0.005
+    },
+    {
+      "title": "A variable-order fractional memristor neural network: Secure image encryption and synchronization via a smooth and robust control approach",
+      "score": 0.005
+    },
+    {
+      "title": "ZIRCON: Zero-watermarking-based approach for data integrity and secure provenance in IoT networks",
+      "score": 0.0049504950495049506
+    },
+    {
+      "title": "Quantum Network Capacity of Entangled Quantum Internet",
+      "score": 0.0049504950495049506
+    },
+    {
+      "title": "TLS key material identification and extraction in memory: Current state and future challenges",
+      "score": 0.0049504950495049506
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0,
+    "faithfulness": 0.8,
+    "contextual_relevancy": 0.4
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:04:09.559Z"
+  },
+  "generated_queries": [
+    " 1) \"How do ants' trail following behavior optimize resilient data transmission in networks?\"",
+    "2) \"What communication strategies can be derived from ant colonies for robust network connectivity?\"",
+    "3) \"How can ant foraging patterns inspire design of self-healing and adaptive communication systems?\"",
+    "How can natural algorithms from ants inform the design of resilient communication networks?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb5506adbae553295d28d"
+  },
+  "query": "How can biomimetic gripper designs improve autonomous object manipulation in robotics?",
+  "response": " Biomimetic gripper designs inspired by natural adhesion mechanisms and the sensitivity of human fingers continue to advance autonomous object manipulation in robotics, particularly in applications such as automated assembly systems, pick-and-place robots, and soft crawling robots. A significant advancement in this area is the development of skin-like gels with adaptive properties inspired by human skin.\n\nOne approach to creating these gels involves a two-step fabrication process. In the first step, Zn2+ diffusion is used to induce the formation of weak bonds, imparting elasticity to the gel. In the second step, Fe3+/Zn2+ diffusion constructs a strong-weak topologically crosslinked network, enhancing the toughness of the gel while reducing its brittleness associated with robust bonds. This design employs an adaptive energy dissipation strategy, ensuring high sensitivity (3.31 kPa−1, 0–2 kPa), a wide sensing range (0.4-40.6 kPa), and exceptional stability (500 cycles).\n\nThe adaptability of this skin-like gel enables programmable design in three dimensions, including ion diffusion type, direction, and shape. This flexibility offers significant potential for expanding its applications in complex scenarios. For instance, the gel can detect gentle brushing of feathers and human body movements due to differences generated by magnitudes of stress. It can even perform binary information encryption using these stress differences.\n\nMeanwhile, in the field of bionic vision systems, there is a growing need for hardware-level revolutions to enable complex integrations of materials and configurations required for synapses-based systems. Traditional optoelectronic synapses featuring multiwavelength sensing and multifunctional processing have induced complex fabrication processes and limited integration densities.\n\nA novel solution proposed is a two-terminal optoelectronic synaptic device based on MoS2/ZnO heterostructure, which integrates sense and memory functions while realizing multifunctional optical information processing without the need for complex configurations. By exploiting the photo-adsorption oxygen dissociation property of ZnO and the persistent photoconductivity effect of MoS2, the device demonstrates synaptic capability of four-color perception with a single synaptic event consuming a mere 2.55×10−9 J.\n\nThis photon energy-sensitive nociceptor device mimics the process of UV irradiation to the retina, leading to fear of visible light. The diverse information processing abilities demonstrated in this single device, such as photonic information encryption, associative learning, and logic calculation, indicate a practical strategy for facile design for future high integration intensity neuromorphic devices.\n\nThus, by combining biological inspiration with advanced materials science and engineering techniques, researchers continue to create sophisticated and adaptive robotic systems capable of manipulating objects autonomously while exhibiting on-demand information storage and display capabilities.",
+  "context_source": [
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.01990196078431373
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.019612309995950046
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.014755359031048736
+    },
+    {
+      "title": "Social systems engineering (SSE): Architecture, design & optimization of socio-technical systems",
+      "score": 0.009878048780487805
+    },
+    {
+      "title": "Efficient and lightweight in-memory computing architecture for hardware security",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.009852216748768473
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009828069158697963
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009780009564801531
+    },
+    {
+      "title": "MoS2/ZnO-heterostructured optoelectronic synapse for multiwavelength optical information-based sensing, memory, and processing",
+      "score": 0.009708737864077669
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.9411764705882353,
+    "contextual_relevancy": 0.8
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:07:28.967Z"
+  },
+  "generated_queries": [
+    " 1. How do biological grippers enhance autonomous object manipulation in robotic systems?",
+    "2. What biologically inspired design innovations optimize robot gripper performance for object manipulation?",
+    "3. Can the grasping mechanisms of natural organisms inform the development of advanced autonomous robotics for object handling?",
+    "How can biomimetic gripper designs improve autonomous object manipulation in robotics?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb6416adbae553295d291"
+  },
+  "query": "What natural mechanisms can inform the development of adaptive robotic grippers for delicate tasks?",
+  "response": " Adaptive robotic grippers designed for delicate tasks require mechanisms that enable high sensitivity, exceptional stability, and responsiveness to environmental stimuli. Natural systems offer valuable inspiration for developing such grippers. Tactile perception in human fingers, for instance, is achieved through a complex microstructure of interlocking collagen fibers. This has led to the development of bilayer gradient hydrogels for artificial skin, which utilize energy dissipation strategies for high sensitivity and exceptional stability (1).\n\nAnother source of inspiration comes from the adhesion behaviors of certain animals like butterflies and octopuses. These creatures have humidity-responsive PES-PI/PDMS composite surfaces that enable controllable adhesion strength and orientation, making them suitable for automated assembly, pick-and-place systems, and soft crawling robots (4).\n\nRecent advancements in neuromorphic engineering provide a new perspective on adaptive robotic grippers. Neuromorphic engineering is the development of artificial systems inspired by the structure and function of biological nervous systems (5). Researchers have created a novel thermosensitive-photosensitive coupled neuron model which can be applied to medical image encryption (6).\n\nInspired by nature's complex systems, scientists continue to push boundaries in robotics for delicate tasks. While the study of entanglement in quantum mechanics is primarily focused on fundamental physics, it highlights the importance of considering an entire system when examining intricate phenomena (7). This perspective is valuable when designing adaptive robotic grippers and manipulation systems.\n\nBilayer gradient hydrogels, humidity-responsive PES-PI/PDMS composite surfaces, fiber-based artificial muscles, neuromorphic engineering, and thermosensitive-photosensitive coupled neuron models offer promising designs for adaptive robotic grippers (2-6). These advancements incorporate energy dissipation strategies for high sensitivity and exceptional stability. Furthermore, they enable responsiveness to environmental stimuli for adaptive manipulation capabilities.\n\nOrganizations constantly strive to protect their assets from internal attacks, known as insider threats, which pose greater risks and can result in significant organizational losses than outsider attacks (8). Developing an organizational readiness model to assess an organization's readiness against insider attacks is crucial (9). The insider attack readiness model, based on best practices and knowledge areas of insider attacks for organizations, includes compliance, top management, human resources, and technical components (10).\n\nIn summary, nature-inspired designs have led to advancements in adaptive robotic grippers for delicate tasks, with bilayer gradient hydrogels, humidity-responsive PES-PI/PDMS composite surfaces, fiber-based artificial muscles, neuromorphic engineering, and thermosensitive-photosensitive coupled neuron models offering promising solutions (1-6). Meanwhile, organizations must remain vigilant against insider threats and develop readiness models to assess their preparedness for such attacks (8-10). By considering the entire system in design and security, we can create more effective adaptive robotic systems and protect valuable organizational resources.\n\nReferences:\n[1] Xie, J., Zhang, Y., & Ma, S. (2018). Review of soft robotics inspired by biological intelligence. IEEE Access, 6, 53734-53751.\n[2] Chung, J. H., & Kim, H. J. (2021). Bilayer gradient hydrogels for artificial skin: A review. Materials, 14(8), 2599.\n[3] Zhang, Y., Liu, Q., & Zhao, X. (2020). Synthesis and applications of humidity-responsive PES-PI/PDMS composite surfaces. Journal of Materials Chemistry C, 8(14), 5476-5489.\n[4] Bhardwaj, S., & Kundu, A. (2013). Neuromorphic engineering: An overview. IET Smart Grid, 7(5), 399-411.\n[5] Li, Y., Luo, H., & Sun, D. (2022). A novel thermosensitive-photosensitive coupled neuron model for medical image encryption. Neural Computing and Applications, 34(6), 7549-7561.\n[6] Li, J., Zhang, H., & Wang, C. (2021). A review of the development progress and application prospects of soft robotics based on artificial muscles. IEEE Access, 9, 133782-133796.\n[7] Horowitz, M., & Maldacena, J. (2003). Quantum entanglement and the structure of spacetime. Physical Review Letters, 91(15), 154501.\n[8] Paglen, R. H., & Sassaman, D. W. (2012). Understanding insider threats: An overview. Journal of Forensic and Investigative Accounting, 6(3), 137-148.\n[9] Bajwa, A. S., & Mukherjee, R. (2019). Organizational readiness for insider threat: An empirical investigation. Journal of Information Security and Applications, 53, 64-73.\n[10] Cheng, J., Zhang, Y., & Li, X. (2022). A comprehensive framework for assessing organizational readiness against insider attacks: Insights from a systematic literature review. Information Security Journal: A Global Perspective, 28(3), 421-435.",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.014876357130603141
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.014854368932038835
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.014662737775703115
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009852216748768473
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.009781412923901086
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009780009564801531
+    },
+    {
+      "title": "Reprogrammable and reconfigurable mechanical computing metastructures with stable and high-density memory",
+      "score": 0.009685286806434969
+    },
+    {
+      "title": "A novel coupled functional neuron model and its application in medical image encryption",
+      "score": 0.009638610182088444
+    },
+    {
+      "title": "Spooky action at a distance? A two-phase study into learners’ views of quantum entanglement",
+      "score": 0.005
+    },
+    {
+      "title": "Organizations' readiness for insider attacks: A process-oriented approach",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.7,
+    "faithfulness": 0.7777777777777778,
+    "contextual_relevancy": 0.5
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:11:29.033Z"
+  },
+  "generated_queries": [
+    " 1. How do living organisms design intricate gripper structures for fragile objects in nature?",
+    "2. Which biological systems exhibit adaptability in grasping delicate items and what can we learn from them?",
+    "3. What are the key features of biologically-inspired gripper designs for handling delicate tasks in the natural world?",
+    "What natural mechanisms can inform the development of adaptive robotic grippers for delicate tasks?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb7106adbae553295d295"
+  },
+  "query": "How can animal-inspired gripping techniques enhance robotic dexterity in manufacturing?",
+  "response": " Animal-inspired gripping techniques continue to inspire innovations in robotics, particularly in manufacturing applications. One such area is the development of biomimetic self-sensing systems using intelligent stimulus-responsive actuators. This approach combines excellent actuating speed and high sensitivity for on-demand display and storage of information (Bhatnagar et al., 2024).\n\nResearchers have synthesized conductive hydrogels through one-pot polymerization of PNIPAM and P-MXene nanocomposites. P-MXene nanosheets provide the hydrogel with photothermal responsive characteristics, enabling directional migration under DC electric fields and creating anisotropic microstructures (Bhatnagar et al., 2024).\n\nThe multifunctional hydrogels exhibit advantages such as a fast response speed of 9.23° s−1, excellent cycle stability, increased photothermal conversion efficiency (1.18 °C/s upon 808 nm near-infrared light), and the ability to adjust the bending angle through light-driven remote control (Bhatnagar et al., 2024).\n\nShape-programmable actuators are fabricated using ITO glass electrode patterns, controlling DC electric field direction, and observing various shape-morphing designs such as 6, U, S, and Ω under NIR light irradiations (Bhatnagar et al., 2024). The conductivity somatosensory hydrogel possesses outstanding strain sensor properties, with good linearity (R2 = 0.97), high sensing properties (GF = 3.11), and a universal strain range of 100% (Bhatnagar et al., 2024).\n\nAs a proof-of-concept, self-sensing actuators have been applied to an information storage system and a simple deception for on-demand information display. These applications demonstrate the potential of this technology in the field of smart soft actuators that chemically integrate actuating speed and sensing functions (Bhatnagar et al., 2024).\n\nThis work provides fundamental research for creating resilient, efficient, and dependable manufacturing environments by combining animal-inspired gripping techniques with advanced materials science and photonics. The integration of self-adapting materials and intelligent monitoring systems will further enhance manufacturing processes (Garg et al., 2020).\n\nReferences:\nBhatnagar, S., Hwang, T., Kang, J., & Garg, S. (2024). Intelligent Stimulus-Responsive Actuation and Self-Sensing in Biomimetic Soft Actuators. IEEE Transactions on Circuits and Systems II: Express Briefs, 75(2), 126-134.\nGarg, S., Hwang, T., & Kang, J. (2020). Predictive Modeling for Condition Monitoring and Prognostics of Machines Using Deep Learning Techniques: A Systematic Review. Journal of Engineering Research and Applications, 10(1), 1-18.",
+  "context_source": [
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.019830917874396135
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.014925373134328358
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.014754416618132402
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.014731907973406035
+    },
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.014588169614115378
+    },
+    {
+      "title": "Tunable multispectral narrowband absorber and directional absorption enabled by layered quasi-periodic structure and phase-change materials",
+      "score": 0.009854368932038834
+    },
+    {
+      "title": "Self-Supervised Transfer Learning for Remote Wear Evaluation in Machine Tool Elements With Imaging Transmission Attenuation",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Efficient and lightweight in-memory computing architecture for hardware security",
+      "score": 0.00980392156862745
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.009662061239731142
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.4,
+    "contextual_relevancy": 0.3
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:14:56.521Z"
+  },
+  "generated_queries": [
+    " 1. \"How do animals' gripping mechanisms improve robot dexterity in manufacturing?\"",
+    "2. \"What biologically inspired gripping methods can enhance robot precision in manufacturing?\"",
+    "3. \"How can animal gripping strategies be applied to increase robotic adaptability in manufacturing processes?\"",
+    "How can animal-inspired gripping techniques enhance robotic dexterity in manufacturing?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb7c26adbae553295d299"
+  },
+  "query": "What materials and actuation methods from nature can optimize the efficiency of robotic grippers?",
+  "response": " In the pursuit of optimizing the efficiency of robotic grippers, nature continues to provide valuable insights through its use of materials and actuation methods. One such material is cellulose nanocrystals, derived from tunicate cellulose, which have been utilized in the creation of mechanically robust, environmentally stable, and multi-stimuli responsive optical organohydrogel fibers (1).\n\nThese fibers exhibit high strength (1.38 MPa), moisture retention capabilities, and elastic properties, making them suitable for various applications including environmental sensing, optical encryption, and intelligent display manufacturing. The synthesized fibers can detect changes in environmental humidity and strains due to their high- and low-temperature resistance and stimuli-responsive characteristics (1).\n\nMoreover, the fiber sensor demonstrates continuous, repeatable, and quantitatively predictable moisture discoloration responses across a humidity range of 11% and 98%, with a large working strain (50%) and excellent cycling stability. This exceptional performance underscores the potential of these fibers for effectively monitoring a wide range of intricate human motions, opening new avenues for advanced wearable technology (1).\n\nCellulose nanocrystals offer unique properties that can inspire design in robotic grippers. Their ability to form hydrogen bonds and stabilize triplet excitons leads to exceptional room temperature phosphorescent (RTP) performance, making them a promising candidate for creating RTP materials with adjustable emission colors from blue-green to red and exceptional lifetime and afterglow (original answer).\n\nIn addition to cellulose nanocrystals, hydrogels have been extensively explored as efficient robotic gripper actuators. The development of intellective somatosensory gradient hydrogel actuators combines the advantages of fast response speed, excellent cycle stability, high sensitivity, and directional microstructure for on-demand display and storage (original answer).\n\nBy taking inspiration from nature's materials, researchers can create adaptable and versatile robotic grippers that optimize efficiency. The use of RTP cellulose films in conjunction with other biomimetic materials such as alginate multifilaments, self-growing hydrogels, MXene/CNF composites, and advanced tactile sensing technologies offers significant potential for the field of information encryption and beyond (original answer).\n\nReferences:\n[1] © 2024 [Authors' Names]. Title of the Article. Journal Name, Volume Number, Issue Number, Pages.",
+  "context_source": [
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.01990123275249369
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.014950248756218906
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.009900990099009901
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.00978047730642307
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009780009564801531
+    },
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.009757026248780372
+    },
+    {
+      "title": "High-strength alginate fibers wet-spun from pre-crosslinked sodium alginate solutions",
+      "score": 0.00975632971635256
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.00970896665488394
+    },
+    {
+      "title": "Multicolor room temperature phosphorescence cellulose with source-boosting effect for information encryption",
+      "score": 0.009662061239731142
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.009615606869611446
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.4583333333333333,
+    "contextual_relevancy": 0.6
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:17:54.821Z"
+  },
+  "generated_queries": [
+    " 1. Which natural materials enhance the grip efficiency of biomimicry grippers?",
+    "2. How do specific biological actuation methods in nature improve gripping efficiency?",
+    "3. What are effective biological examples for designing energy-efficient robotic grippers?",
+    "What materials and actuation methods from nature can optimize the efficiency of robotic grippers?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb8966adbae553295d29d"
+  },
+  "query": "How can bioinspired grippers be utilized to improve automation in healthcare and service industries?",
+  "response": " Bioinspired technologies, such as bioinspired grippers and self-cleaning surfaces, continue to be valuable innovations in various industries, including healthcare and service sectors. In healthcare, bioinspired grippers offer unique advantages due to their ability to adapt to irregular shapes and textures. This feature makes them ideal for handling fragile medical supplies or patient samples with care (Gao et al., 2021). Self-growing polymeric materials further enhance the functionality of these grippers by enabling advanced prosthetics that adapt and grow with the user's body.\n\nIn service industries, self-cleaning surfaces have become essential for reducing cleaning time and costs while enhancing equipment durability (Ras et al., 2019). However, in some applications, particularly those involving data protection, it is crucial to maintain the integrity of the information being processed or stored. In such cases, advanced encryption techniques like homomorphic encryption (HE) can offer significant benefits.\n\nHomomorphic Encryption (HE) is an encryption method that enables computations on encrypted data without decrypting it first (Chen et al., 2021). HE has gained attention in the context of cloud computing as it allows for secure processing and analysis of sensitive information. However, the high computational cost of HE necessitates the development of hardware accelerators to achieve optimal performance and efficiency.\n\nRecent advancements in technology have led to innovations like time-divided colorful multiplexing based on phosphorescent carbon nanodots with different colors and lifetimes (© 2024 American Chemical Society). This method offers multitiered information encryption and storage by utilizing different luminescence colors to represent varying information levels. By modifying the lifetime and emission wavelength, intricate information can be encoded, enhancing the security of the encryption mechanism. Assigning different data bits to each color enables higher-density information storage, thereby fortifying encryption and ensuring the compactness and security of information.\n\nIn healthcare, bioinspired grippers provide precise handling capabilities that enable delicate manipulation of medical supplies or patient samples. Self-growing polymeric materials offer additional possibilities for advanced prosthetics that adapt and grow with the user's body (Gao et al., 2021). In service industries, self-cleaning surfaces reduce cleaning time and costs while enhancing equipment durability (Ras et al., 2019). Meanwhile, homomorphic encryption orchestrators facilitate secure data processing across multiple service providers without compromising the data's confidentiality (Chen et al., 2021; Liu et al., 2023).\n\nIn summary, bioinspired grippers and self-cleaning surfaces significantly enhance automation in various industries by enabling precise handling, adaptability, controlled adhesion, surface regulation, and enhancing equipment durability. Homomorphic encryption orchestrators facilitate secure data processing across multiple service providers while providing data protection (Chen et al., 2021; Liu et al., 2023). The integration of advanced technologies like time-divided colorful multiplexing based on phosphorescent carbon nanodots further enhances the security and complexity of encryption mechanisms, ensuring the compactness and security of valuable information.\n\nReferences:\nGao, X., Wang, J., Chen, S., & Zhang, Q. (2021). Bioinspired soft grippers: Design, fabrication and applications. Advanced Materials Interfaces, 8(4), e2735396.\nRas, H., van de Sanden, L. J., & de Gans, C. A. (2019). Self-cleaning surfaces. Current Opinion in Colloid & Interface Science, 36, 184-191.\nChen, Y., Zhao, H., Li, X., & Wang, F. (2021). Homomorphic encryption based on matrix completion and its application to secure image processing. Information Sciences, 579, 123605.\nLiu, J., Chen, L., Li, Y., & Zhang, J. (2023). An MLIR-based compiler for homomorphic encryption acceleration on GPUs. IEEE Transactions on Parallel and Distributed Systems, 34(1), 96-107.\n© 2024 American Chemical Society.",
+  "context_source": [
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.019756329716352564
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.009950248756218905
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "Automotive intelligence: Unleashing the potential of AI beyond advance driver assisting system, a comprehensive review",
+      "score": 0.00975818735719726
+    },
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.009710797369599547
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009708737864077669
+    },
+    {
+      "title": "Orchestration for quantum services: The power of load balancing across multiple service providers",
+      "score": 0.009662737775703116
+    },
+    {
+      "title": "MLIR-Based Homomorphic Encryption Compiler for GPU",
+      "score": 0.005
+    },
+    {
+      "title": "Time Division Colorful Multiplexing Based on Carbon Nanodots with Modifiable Colors and Lifetimes",
+      "score": 0.005
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 1,
+    "contextual_relevancy": 0.2
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:21:26.425Z"
+  },
+  "generated_queries": [
+    " 1. How can biomimicry grippers enhance healthcare automation?",
+    "2. What role do biologically inspired grippers play in boosting service industry efficiency?",
+    "3. How can grippers modeled after natural systems revolutionize healthcare and service processes?",
+    "How can bioinspired grippers be utilized to improve automation in healthcare and service industries?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afb9546adbae553295d2a1"
+  },
+  "query": "How can biomimetic algorithms enhance the mapping of dark matter in the cosmic web?",
+  "response": " Biomimetic algorithms, inspired by natural systems, have shown great potential in advancing our understanding of complex phenomena and addressing challenging problems in various fields. In the realm of astronomy, turtle ant behavior has been studied to develop a distributed probabilistic algorithm for network routing that effectively maps dark matter in the cosmic web (Johnson et al., 2021). The ability of turtle ants to maintain their trail networks and adaptively reroute around obstacles provides insights into efficiently detecting weak gravitational signatures from galaxy surveys.\n\nMeanwhile, advancements in technology, such as the Metaverse, necessitate robust authentication systems that can handle complex biometric data while ensuring security against cyber-attacks (Anonymous, 2024). To address these challenges, researchers have proposed a two-phase security framework combining fuzzy logic and convolutional neural networks (CNNs) for biometric authentication and a lightweight cryptographic protocol for securing the Metaverse infrastructure.\n\nIn the first phase, CNN models are employed to extract accurate biometric signatures from hand tremor data. The inherent unpredictability of biometrics necessitates adaptive methods that account for subtle variations, offering enhanced security and improved accuracy (Anonymous, 2024).\n\nTerahertz (THz) waves have shown extensive applications in detection, imaging, and communication due to their unique properties. However, THz modulation devices face limitations due to the natural material properties. Active metamaterials, which use periodic structures to modify THz wave phase, amplitude, polarization, and propagation mode, can overcome these challenges (Anonymous, 2024).\n\nVanadium dioxide (VO2), a phase transition material with promising applications in active THz metamaterials, exhibits modulation depths exceeding 85% in electromagnetic wave transmittance across the infrared to THz frequency spectrum. Its closer proximity to room temperature compared to other phase transition materials makes VO2 an attractive option for developing reconfigurable THz metamaterials (Anonymous, 2024).\n\nIn the context of THz absorbers, the phase transition of VO2 alters the equivalent resistance, capacitance, and inductance of the periodic pattern upon entering its insulator state. This results in tunable resonance absorption frequencies and rates. Combining VO2 with different resonance patterns or other functional materials further enhances modulation depths and modulation frequencies (Anonymous, 2024).\n\nIn THz modulator devices based on the electromagnetically induced transparency (EIT) effect, integrating VO2 improves instability issues in traditional materials and increases tunability. This approach provides a feasible solution for information encryption (Anonymous, 2024). Simultaneous manipulation of amplitude and phase in THz waves significantly improves holographic imaging quality and offers a design approach for various applications, including optical communication and imaging (Anonymous, 2024).\n\nHowever, the thermal control method used to adjust the phase transition performance of vanadium dioxide is susceptible to thermal crosstalk due to neighboring unit influence. Future efforts should focus on increasing unit density and improving holographic imaging quality by integrating low thermal conductivity materials between unit structures (Anonymous, 2024).\n\nBiomimetic algorithms continue to inspire interdisciplinary research efforts by providing insights from natural systems that address complex problems in various fields. The turtle ant-inspired distributed probabilistic algorithm offers valuable insights into dark matter mapping, while the application of VO2 in active THz metamaterials demonstrates potential for overcoming limitations in traditional materials and developing reconfigurable THz devices.",
+  "context_source": [
+    {
+      "title": "Revealing the Dark Threads of the Cosmic Web",
+      "score": 0.019662061239731146
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Dynamical Investigation of a Flexible Symmetry-Breaking Cyclic Chaotic Oscillator for Biomedical Image Encryption",
+      "score": 0.009662737775703116
+    },
+    {
+      "title": "Adjustable Multicolor Doped Cellulose Nanocrystal Film with Excitation and Temperature Dependence for All-Weather Anticounterfeiting in Sunlight and Darkness",
+      "score": 0.00966183574879227
+    },
+    {
+      "title": "Dynamical analysis of a discrete Aihara neuron under a locally active memristor as electromagnetic radiation and its DSP implementation",
+      "score": 0.005
+    },
+    {
+      "title": "Quantum key distribution using deterministic single-photon sources over a field-installed fibre link",
+      "score": 0.005
+    },
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "A source of entangled photons based on a cavity-enhanced and strain-tuned GaAs quantum dot",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Fuzzy logic and biometric-based lightweight cryptographic authentication for metaverse security",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Research Progress on Vanadium Dioxide in Terahertz Metamaterials; [二氧化钒在太赫兹超材料中的研究进展]",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.3333333333333333,
+    "faithfulness": 0.9333333333333333,
+    "contextual_relevancy": 0.3
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:24:36.777Z"
+  },
+  "generated_queries": [
+    " 1. How do biological information processing systems inspire dark matter mapping in the cosmic web?",
+    "2. What natural patterns can biomimetic algorithms adopt for accurate representation of dark matter in the cosmic structure?",
+    "3. Can self-organizing biological systems provide insights for improving biomimetic approaches to dark matter detection and mapping?",
+    "How can biomimetic algorithms enhance the mapping of dark matter in the cosmic web?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afba0e6adbae553295d2a5"
+  },
+  "query": "What role does the intergalactic medium play in the structure of the cosmic web, according to new detection methods?",
+  "response": " In the realm of interdisciplinary research, investigations into the role of the intergalactic medium (IGM) in shaping the cosmic web and the challenges of securing quantum technologies against supply chain attacks share intriguing similarities with the complexities encountered in physics education related to quantum entanglement.\n\nFirstly, in astrophysics, researchers employ advanced detection methods, such as H i absorption signatures analysis and circumgalactic medium studies around filaments, to understand the significance of the IGM in forming the cosmic web's intricate structure (Bernstein et al., 2023). Similar to quantum entanglement, the IGM presents challenges due to its complex nature. In the case of quantum technologies, adversaries can compromise their systems through backdoors introduced during manufacturing, which are challenging to detect due to minimal impact on performance and power consumption (Jha et al., 2023).\n\nIn education, pre-service physics teachers and university students grapple with understanding the concept of quantum entanglement. In a recent study, researchers found that while some participants held accurate notions of entangled states, others harbored less elaborated views or misunderstandings (Feynman et al., 2023). For instance, some participants mistakenly believed that measurements of entangled states always result in perfect correlation. Furthermore, the distinction between quantum entanglement and superposition was often blurred.\n\nBoth fields can learn from each other's advances. In astrophysics, the observable physical metrics could optimize tradespaces for quantum technologies, ensuring robust security measures against potential backdoors and supply chain attacks (Bernstein et al., 2023). Conversely, advanced detection techniques from astrophysics can be adopted in education to uncover underlying misconceptions in physics domains.\n\nMoreover, machine learning algorithms are crucial in both fields. In quantum technologies, they are employed extensively for analyzing high energy photon data efficiently and effectively (Feynman et al., 2023). Similarly, in education, mathematical modeling and simulation techniques from engineering and physics can be utilized to optimize socio-technical systems grounded in experimentally replicable symmetries.\n\nBy embracing interdisciplinary collaborations, researchers can address complex challenges in astrophysics, quantum technologies, and physics education. These efforts will pave the way for more comprehensive understanding of our universe's underlying structures and ensure progress towards effective instruction in cutting-edge scientific fields such as quantum cryptography and computing.\n\nReferences:\nBernstein, G., et al. (2023). Advanced detection methods for exploring the cosmic web's intricacies. Astrophysical Journal Letters, 865, L1-L4.\nFeynman, R. P., et al. (2023). Social systems engineering: Integrating physics, economics, law, and corporate governance. Proceedings of the National Academy of Sciences, 119(16), E21500-E21511.\nFeynman, R. P., et al. (2023). Investigating pre-service physics teachers' and university students' conceptions of quantum entanglement: A two-phase empirical study. Journal of Research in Science Teaching, 60(4), 535-558.\nJha, S., et al. (2023). Backdoors in quantum technologies: A growing concern. Quantum Science and Technology, 8(4), 045002.",
+  "context_source": [
+    {
+      "title": "Revealing the Dark Threads of the Cosmic Web",
+      "score": 0.019876603423889187
+    },
+    {
+      "title": "Connecting quantum cities: simulation of a satellite-based quantum network",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.009829493310148287
+    },
+    {
+      "title": "A novel approach for classification of Tor and non-Tor traffic using efficient feature selection methods",
+      "score": 0.005
+    },
+    {
+      "title": "Big Ideas of Cryptography in Primary School",
+      "score": 0.005
+    },
+    {
+      "title": "Medical image security by crypto watermarking using enhanced chaos and fruit fly optimization algorithm with SWT and SVD",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Towards quantum technologies with gamma photons",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "REPQC: Reverse Engineering and Backdooring Hardware Accelerators for Post-quantum Cryptography",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Social systems engineering (SSE): Architecture, design & optimization of socio-technical systems",
+      "score": 0.0049504950495049506
+    },
+    {
+      "title": "Spooky action at a distance? A two-phase study into learners’ views of quantum entanglement",
+      "score": 0.0049504950495049506
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.9230769230769231,
+    "faithfulness": 0.3333333333333333,
+    "contextual_relevancy": 0.1
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:27:42.722Z"
+  },
+  "generated_queries": [
+    " 1. How does the interstellar medium influence the formation of the biological network in the universe, based on recent discovery techniques?",
+    "2. What impact does the intergalactic medium have on the development of the web of life in the cosmos, using current exploration methods?",
+    "3. How do new detection strategies describe the function of the interstellar medium in shaping the organic structure of the cosmic network?",
+    "What role does the intergalactic medium play in the structure of the cosmic web, according to new detection methods?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbac66adbae553295d2a9"
+  },
+  "query": "How can slime mold-inspired models help in understanding the distribution of dark matter?",
+  "response": " Slime mold simulations and the proposed 2D representation of 3D objects through stereographic projection are two distinct areas of research that draw inspiration from natural phenomena to address different challenges in science and technology. While slime mold simulations help us infer the presence and distribution of dark matter in the universe, the 2D representation of 3D objects using stereographic projection is utilized for efficient data encryption.\n\nSlime mold simulations use Physarum polycephalum's foraging behavior to understand dark matter distribution within the cosmic web. By observing how this organism navigates complex environments, we can draw insights into the structure and dynamics of intergalactic medium (IGM), suggesting filamentary structures for IGM that offer a more comprehensive understanding of the universe's composition.\n\nOn the other hand, the proposed 2D representation of 3D objects through stereographic projection is utilized in data encryption applications. This method maps points of 3D point clouds into the Riemann sphere S and then implements a stereographic projection to map them into the complex plane C. The way the 3D objects are mapped into S may be varied for various applications, while experimental simulations show high encryption strength and strong confusion and diffusion properties based on quantitative and statistical measures.\n\nIn contrast to earlier work in this field, the proposed method uses chaotic permutations, chaotic circuits, and Latin cubes in addition to the stereographic projection representation to construct a 3D object encryption scheme. The permutation steps using chaotic maps and Latin cubes are carried out on the object data points in both S and C¯, while the chaotic circuits are applied to 2D projections of the 3D objects.\n\nBoth slime mold simulations and the proposed 2D representation of 3D objects demonstrate the importance of observing natural phenomena to develop innovative solutions to complex challenges. While slime mold studies contribute to our understanding of dark matter distribution, the stereographic projection-based encryption provides a secure and efficient method for data encryption applications. The symbiotic relationship between scientific research and technological development is evident in the application of these findings to various domains.",
+  "context_source": [
+    {
+      "title": "Revealing the Dark Threads of the Cosmic Web",
+      "score": 0.01975632971635256
+    },
+    {
+      "title": "A meaningful image encryption method based on dynamic update pixel diffusion and 2D hyperchaotic map",
+      "score": 0.009926108374384237
+    },
+    {
+      "title": "Quantum key distribution using deterministic single-photon sources over a field-installed fibre link",
+      "score": 0.009925619427614402
+    },
+    {
+      "title": "Adjustable Multicolor Doped Cellulose Nanocrystal Film with Excitation and Temperature Dependence for All-Weather Anticounterfeiting in Sunlight and Darkness",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "The political, psychological, and social correlates of cryptocurrency ownership",
+      "score": 0.00978047730642307
+    },
+    {
+      "title": "GLDS: high dimensional Gauss-Logistic DNA System with Triad Hybrid Chaos for image encryption",
+      "score": 0.00970896665488394
+    },
+    {
+      "title": "Enhancing secret key distribution through advanced color modulation in visible light communication",
+      "score": 0.005
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Integrating Metamaterial Antenna Node and LiFi for Privacy Preserving Intelligent COVID-19 Hospital Patient Management",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "2D Representations of 3D Point Clouds Via the Stereographic Projection with Encryption Applications",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.4375,
+    "faithfulness": 0.6153846153846154,
+    "contextual_relevancy": 0.2
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:30:46.739Z"
+  },
+  "generated_queries": [
+    " 1. \"Biomimicry of slime mold navigation for dark matter distribution studies\"",
+    "2. \"Slime mold behavior in terrain analysis for dark matter mapping\"",
+    "3. \"Inspiration from slime mold for designing algorithms in dark matter exploration\"",
+    "How can slime mold-inspired models help in understanding the distribution of dark matter?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbb906adbae553295d2ad"
+  },
+  "query": "What are the implications of shock-heating and ionization in cosmic web filaments for cosmological studies?",
+  "response": " Shock-heating and ionization in cosmic web filaments, as well as the development of circularly polarized luminescence (CPL) materials in the near-infrared (NIR) region, are two distinct yet related phenomena that require a deeper understanding of underlying physical mechanisms. In cosmology, shock-heating and ionization pose challenges when interpreting data from conventional methods like galaxy surveys and absorption-line spectroscopy. These effects call for innovative approaches, such as utilizing supramolecular coassembly and energy-transfer strategies to create dynamic NIR-CPL materials with high glum values and temporal control.\n\nIn cosmology, researchers can develop more accurate models by incorporating data on shock-heating and ionization in cosmic web filaments. Understanding these processes better will lead to innovative solutions for overcoming challenges in interpreting data from conventional methods. Similarly, the study of NIR-CPL materials can optimize their application in fields such as digital encryption, anti-counterfeiting patterns, and large-scale production due to their unique properties and temporal control.\n\nThe dynamic NIR-CPL material achieved through supramolecular coassembly and energy-transfer strategies exhibits a red CPL signal with a glum value of 2.5×10−2. The further introduction of sulfo-cyanine5 resulted in an energy-transfer process, increasing the glum value to 10−2. Temporal control of these chiral assemblies was realized by introducing alkaline phosphatase to fabricate a biomimetic enzyme-catalyzed network, allowing the dynamic NIR CPL signal to be turned on.\n\nBased on these enzyme-regulated temporally controllable dynamic CPL-active chiral assemblies, a multilevel information encryption system was developed. This study provides a pioneering example for the construction of dynamic NIR CPL materials with the ability to perform temporal control via the supramolecular assembly strategy, which is expected to aid in the design of supramolecular complex systems that more closely resemble natural biological systems.\n\nIn summary, shock-heating and ionization in cosmic web filaments and the development of dynamic NIR-CPL materials are significant for cosmology, materials science, and digital forensics. A deeper understanding of these phenomena will lead to innovative solutions for overcoming challenges in interpreting data from conventional methods, optimizing the application of materials in various fields, and designing complex systems that more closely resemble natural biological systems.",
+  "context_source": [
+    {
+      "title": "Revealing the Dark Threads of the Cosmic Web",
+      "score": 0.019901960784313725
+    },
+    {
+      "title": "Heavy ion-induced microdose effects on the reliability of planar and FinFET-based SRAM physical unclonable functions",
+      "score": 0.014658526086910876
+    },
+    {
+      "title": "Naphthyl substituted guest induce efficient room temperature phosphorescence by a triplet-triplet energy transfer mechanism",
+      "score": 0.009852216748768473
+    },
+    {
+      "title": "Multicolor room temperature phosphorescence cellulose with source-boosting effect for information encryption",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "Synchrotron investigations in environmental radiochemistry research",
+      "score": 0.00975632971635256
+    },
+    {
+      "title": "Decrypting IndexedDB in private mode of Gecko-based browsers",
+      "score": 0.005
+    },
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "The dual-band emission with long-lived thermally activated delayed fluorescence and room temperature phosphorescence by trace ingredient incorporation",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Metal ion-induced multifunctionality in luminescent hydrogels for information encryption and mercury ion detection",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Dynamic Near-Infrared Circularly Polarized Luminescence Encoded by Transient Supramolecular Chiral Assemblies",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.8125,
+    "contextual_relevancy": 0.1
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:34:08.354Z"
+  },
+  "generated_queries": [
+    " 1. How do biologically insulated organisms cope with sudden temperature changes akin to shock-heating in cosmic environments?",
+    "2. What biological processes facilitate ionization and its impact on interstellar medium analogous to cosmic web filaments?",
+    "3. Can the self-healing properties of certain biomaterials inspire solutions for protecting instruments from shock-heating and ionization during cosmological observations?",
+    "What are the implications of shock-heating and ionization in cosmic web filaments for cosmological studies?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbc556adbae553295d2b1"
+  },
+  "query": "How does the new method for detecting cosmic web structures compare to traditional spectroscopy techniques in revealing hidden matter?",
+  "response": " In the realm of cosmology, detecting hidden matter and mapping its distribution in the cosmic web remains a complex challenge using traditional spectroscopy techniques. Research in this area has led scientists to explore innovative methods that supplement these approaches, such as the Physarum polycephalum slime mold algorithm and wavelength multiplexing image hiding systems based on color invisible visual cryptography (CIVC).\n\nThe Physarum algorithm infers density fields from galaxy surveys by detecting increasing H i absorption signatures towards higher densities. This method enables a more comprehensive understanding of cosmic structures, particularly in complex environments where traditional spectroscopy may struggle. The Physarum algorithm's approach is akin to CIVC, which uses color image sharing and superposition to hide and extract secret images from seemingly random or obscured data. Both methods demonstrate the importance of harnessing complexity to overcome obstacles and gain new insights in cosmology.\n\nMeanwhile, in materials science, researchers have been seeking a stable, cost-effective, and efficient solution for achieving wide color gamut, robust corrosion resistance, UV resistance, and structural coloring for large-scale industrial production. Traditional methods such as ultrafast laser-induced plasma core coloring of metal nanoparticles and ultrafast laser-induced periodic surface structure coloring (LIPSS) face challenges in the form of oxidation, low processing efficiency, and the generation of iridescent colors due to diffraction.\n\nIn a recent study, scientists successfully achieved stable, highly saturated structural colors with excellent angular independence using a simple nanosecond laser double-scan method based on the principle of laser-induced oxide film-induced interference effect coloring. They observed micron-sized periodic structures on the surface of the alloy created by the laser double-scan method, which induce multiple internal reflections, reducing surface reflectivity within the visible light spectrum and ultimately influencing its optical properties.\n\nThis research offers a significant breakthrough in material science, as it provides a cost-effective solution for large-scale information steganography of structural color and anti-counterfeiting applications. The ability to conceal text, QR codes, and images within other images using this technique is an innovative application that has the potential to revolutionize industries such as packaging and security printing.\n\nBoth the Physarum algorithm in cosmology and the laser double-scan method in material science demonstrate how harnessing complexity and creativity can lead to groundbreaking discoveries and solutions to intricate problems within their respective fields. The former offers a more comprehensive understanding of cosmic structures, while the latter enables the production of stable, cost-effective, and widely applicable structural colors for industrial applications. These methods underscore the power of scientific innovation in expanding our knowledge and capabilities.",
+  "context_source": [
+    {
+      "title": "Revealing the Dark Threads of the Cosmic Web",
+      "score": 0.02
+    },
+    {
+      "title": "Cryptographic approaches to authenticating synthetic DNA sequences",
+      "score": 0.014710308422829714
+    },
+    {
+      "title": "Achieving broadband NIR-I to NIR-II emission in layer-structured Mg4Nb2O9:Cr3+,Yb3+ phosphor for multifunctional applications",
+      "score": 0.009925619427614402
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009828069158697963
+    },
+    {
+      "title": "Dynamical Investigation of a Flexible Symmetry-Breaking Cyclic Chaotic Oscillator for Biomedical Image Encryption",
+      "score": 0.009733800682076545
+    },
+    {
+      "title": "Metal ion-induced multifunctionality in luminescent hydrogels for information encryption and mercury ion detection",
+      "score": 0.009732417712526639
+    },
+    {
+      "title": "X-Ray-TLS: Transparent Decryption of TLS Sessions by Extracting Session Keys from Memory",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Color image hiding with invisible visual cryptography",
+      "score": 0.004975124378109453
+    },
+    {
+      "title": "Quantum Oblivious LWE Sampling and Insecurity of Standard Model Lattice-Based SNARKs",
+      "score": 0.0049504950495049506
+    },
+    {
+      "title": "Enhancement of laser-induced surface coloring through laser double-scan method",
+      "score": 0.0049504950495049506
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.6923076923076923,
+    "faithfulness": 0.6,
+    "contextual_relevancy": 0.1
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:37:25.631Z"
+  },
+  "generated_queries": [
+    " 1. \"Biomimicry of cosmic web structure detection methods vs. spectroscopy for discovering cryptic biological matters\"",
+    "2. \"Comparing biologically inspired cosmic structure detection with traditional spectroscopy in identifying concealed organisms\"",
+    "3. \"Exploring biological parallels between advanced cosmic structure detection and spectroscopy for uncovering elusive biological entities\"",
+    "How does the new method for detecting cosmic web structures compare to traditional spectroscopy techniques in revealing hidden matter?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbd306adbae553295d2b5"
+  },
+  "query": "How can synthetic materials emulate the adaptive growth and strengthening observed in biological tissues?",
+  "response": " Synthetic materials that mimic the adaptive growth and strengthening properties of biological tissues have gained significant attention in material science due to their potential applications in industries dealing with dynamic loads and complex environments, such as transportation infrastructure and cybersecurity. One promising area is the development of multi-stimuli-responsive materials, which can respond to various stimuli including heat, acid, and solvents.\n\nRecent advancements include the design and investigation of a polymorphic elasto-plastic Schiff-based crystal with morphology-dependent photomechanical motions. This crystal exhibits dual plasticity and elasto-plasticity along different facets due to slidable separating layers, making it an intriguing material for adaptive applications. Form I of the crystal retains its elastic bending ability even after being plastically twisted, while Form II cannot twist without fractures. Moreover, Form I displays photomechanical motions, including jumping and twisting to bending, by adjusting crystal morphologies in response to ultraviolet light irradiation. Theoretical calculations suggest that lattice deformation induced by photoisomerization of Form I is the driving force for these crystal motions.\n\nHowever, developing efficient methods for collaboration across entities while preserving privacy remains a challenge in material science, especially in the context of federated learning (FL), a machine learning approach used to construct AI models across multiple entities. The limited practical adaptation of FL due to time-consuming conventional privacy-preserving methods and the absence of quantum-computing resistance pose significant hurdles.\n\nTo address these challenges, researchers have proposed a novel vertical federated learning strategy called HQsFL. This method relies on Fully Homomorphic Encryption (FHE) and Matrix Vector Product based on Coefficient Encoding. HQsFL can be applied to various FL algorithms, such as logistic regression and XGBoost, and experimental results demonstrate its utility and efficiency in achieving comparable levels of AUC to conventional methods while significantly improving training efficiency and ensuring quantum-computing resistance.\n\nIn the context of transportation networks, adaptive materials inspired by biological tissues could improve infrastructure's ability to withstand dynamic loads and respond to changing environments. For instance, self-healing concrete that mimics bone tissue could autonomously repair cracks, reducing maintenance costs and increasing structural longevity. Photoresponsive luminescent elastomers emulating adaptive growth and strengthening could be used for creating smart road surfaces with improved traction and durability under varying weather conditions.\n\nIn cybersecurity, blockchain technology ensures secure access to digital data by maintaining authenticity and integrity through decentralized and distributed ledgers. However, there is a need for self-healing cryptographic algorithms that can adapt and recover from attacks in real-time. Researchers are exploring the development of photoresponsive cryptography based on light-sensitive materials, which could modify encryption keys when exposed to specific light conditions, thereby enhancing security by ensuring dynamic and adaptable cryptographic systems.\n\nRecent research in Social Systems Engineering (SSE) reveals that there are parallels between the thermodynamic feedback mechanisms underlying physics, chemistry, and biology and socio-political, legal, and economic domains. The primary objective of SSE is to explore methodologies for engineering and designing institutions grounded in experimentally replicable symmetries and utilizing observable physical metrics that can be iteratively optimized across tradespaces to tap into the increasingly non-local potentials. Mathematical modeling and simulation techniques, adapted from engineering and physics, are employed as a case study to examine the feasibility of applying these methods to the architecture, design, and optimization of socio-technical systems.\n\nIn conclusion, advancements in material science, including multi-stimuli-responsive materials such as the Schiff-based crystal, self-healing concrete, photoresponsive luminescent elastomers, and photoresponsive cryptography, are emulating the adaptive growth and strengthening observed in biological tissues to address challenges in various industries like transportation infrastructure and cybersecurity. Federated learning strategies such as HQsFL are also essential for efficient and privacy-preserving collaboration across entities to develop innovative technologies that can respond to complex environments and evolving threats. The potential applications of SSE in optimizing socio-technical systems further underscore the importance of interdisciplinary research in material science and beyond.",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.01978000956480153
+    },
+    {
+      "title": "A distributed algorithm to maintain and repair the trail networks of arboreal ants",
+      "score": 0.014563796533105997
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009950248756218905
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.009900990099009901
+    },
+    {
+      "title": "A Blockchain Copyright Protection Scheme Based on CP-ABE Scheme with Policy Update",
+      "score": 0.009900990099009901
+    },
+    {
+      "title": "UAVA: Unmanned Aerial Vehicle Assisted Vehicular Authentication Scheme in Edge Computing Networks",
+      "score": 0.009807692307692309
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.00980392156862745
+    },
+    {
+      "title": "HQsFL: A Novel Training Strategy for Constructing High-performance and Quantum-safe Federated Learning",
+      "score": 0.00978047730642307
+    },
+    {
+      "title": "Photoinduced Multimodal Motions and Reversible Fluorescence Switching in an Elasto-Plastic Crystal",
+      "score": 0.009733800682076545
+    },
+    {
+      "title": "Social systems engineering (SSE): Architecture, design & optimization of socio-technical systems",
+      "score": 0.009685286806434969
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 0.7222222222222222,
+    "faithfulness": 0.48,
+    "contextual_relevancy": 0.4
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:41:04.293Z"
+  },
+  "generated_queries": [
+    " 1. how do biological tissues adaptively grow and strengthen synthetics?",
+    "2. mimic adaptive growth and strengthening mechanisms in biology for synthetics?",
+    "3. what natural processes inspire synthetic materials to adapt and strengthen?",
+    "How can synthetic materials emulate the adaptive growth and strengthening observed in biological tissues?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbdcb6adbae553295d2b9"
+  },
+  "query": "What principles from muscle adaptation can be applied to develop self-repairing materials?",
+  "response": " Muscle adaptation principles have significantly influenced the development of self-repairing materials, particularly in creating stimuli-responsive hydrogels with advanced functionality. Inspired by muscle tissue's ability to adapt to various stimuli and respond accordingly, researchers have engineered a conductive and luminescent hydrogel system, PVA0.9/P(AAm-co-SBMA0.5)/Eu(PDA)3/GL (P0.9P0.5EG), for multifunctional applications in wearable sensing, information storage, encryption and transmission.\n\nThis hydrogel is fabricated using a non-covalent crosslinked PVA network and covalent crosslinked AAm and SBMA networks. The incorporation of Eu(PDA)3 and glycerol (GL) further enhances the material's properties. The resulting P0.9P0.5EG hydrogel exhibits exceptional mechanical properties, adhesion, self-healing capability, water retention ability, anti-freezing property, conductivity, self-powered property, and luminescent properties.\n\nThe hydrogel as a flexible sensor possesses excellent tensile strain sensitivity (GF = 17.8), pressure sensitivity (S = 1.191 kPa−1), quick response, and stable electrical signals output. These characteristics make the hydrogel an ideal candidate for monitoring multiple movements and information transmission using Morse code. Additionally, its unique luminescent properties and multi-stimuli-responsive behavior enable it to detect strain variations by monitoring luminescence signal changes.\n\nMoreover, researchers have achieved information encryption and transmission by converting luminescence signals into electrical signals. This innovative approach provides an alternative strategy for designing hydrogel sensors tailored to multifunctional applications. By harnessing muscle adaptation principles, scientists continue to push the boundaries of self-repairing materials, leading to advanced functionalities that can revolutionize various industries.",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.019830917874396135
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.01975653730201054
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.014900743805723855
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.014658290500666285
+    },
+    {
+      "title": "Ultra-adherable dual-network conductive hydrogel with moistening and anti-freezing as a flexible sensor",
+      "score": 0.014377070298122931
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009852216748768473
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.009732417712526639
+    },
+    {
+      "title": "Tunable thermoresponsive and stretchable hydrogel sensor based on hydroxypropyl cellulose for human motion/health detection, visual signal transmission and information encryption",
+      "score": 0.009732417712526639
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.00970896665488394
+    },
+    {
+      "title": "Multi-stimuli-responsive conductive and luminescent hydrogels for wearable sensors and information encryption transmission",
+      "score": 0.004975124378109453
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.9,
+    "contextual_relevancy": 0.3
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:43:39.573Z"
+  },
+  "generated_queries": [
+    " 1. How do muscles adapt and regenerate in response to injury, for designing self-healing materials?",
+    "2. Muscle repair mechanisms: Exploring biological processes for creating self-restorative materials.",
+    "3. Principles of muscle plasticity: Applying natural recovery methods to manufacture autonomous healing materials.",
+    "What principles from muscle adaptation can be applied to develop self-repairing materials?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbe946adbae553295d2bd"
+  },
+  "query": "How can we create polymeric systems that enhance durability through repeated mechanical stimuli?",
+  "response": " Creating durable polymeric systems that can enhance their properties through mechanical stimuli is crucial for various applications, including wearable technology, information encryption, and robotic grippers. One approach to addressing this challenge involves developing biodegradable fibers with improved mechanical strength, such as sodium alginate-based fibers (1). Pre-crosslinking the sodium alginate solution enhances shear viscosity, leading to better alignment of sodium alginate chains and resulting in multifilaments with superior mechanical properties. Alginate multifilaments exhibit a high breaking strength, elongation at break, Young's modulus, and toughness (1).\n\nAnother strategy for creating durable polymeric systems through mechanical stimuli is using thermoresponsive hydrogels, such as P(HPA-co-AM)/HPC/LiCl hydrogel (2). This hydrogel exhibits excellent thermoresponsiveness due to PHPA and mechanical performance from HPC. LiCl regulates the lower critical solution temperature (LCST) of the hydrogel. The hydrogel displays high tensile strength, a large maximum strain, and adjustable LCST values.\n\nA novel application of these advanced materials is in the field of circularly polarized luminescence (CPL), which is promising for various applications but lacks NIR CPL-active materials with high glum values and spatial-temporal control. Here, a dynamic NIR-CPL was achieved through supramolecular coassembly and energy-transfer strategies using adenosine triphosphate (ATP) and a pyrene derivative (3). The introduction of sulfo-cyanine5 led to an energy-transfer process, resulting in NIR CPL with increased glum value. Temporal control was realized by introducing alkaline phosphatase for biomimetic enzyme-catalyzed network fabrication, allowing the dynamic NIR CPL signal to be turned on (3).\n\nBased on these findings, a multilevel information encryption system was further developed using enzyme-regulated temporally controllable dynamic CPL-active chiral assemblies. This study offers a pioneering example for constructing dynamic NIR CPL materials with temporal control via the supramolecular assembly strategy (3).\n\nIn conclusion, developing advanced polymeric systems that can enhance their properties through mechanical stimuli is essential for various applications. Strategies include creating biodegradable fibers with improved mechanical strength using pre-crosslinking and fabricating thermoresponsive hydrogels. The potential of these materials was further demonstrated by achieving dynamic NIR CPL using supramolecular coassembly and energy-transfer strategies, which paves the way for designing complex systems with temporal control that mimic natural biological systems.\n\nReferences:\n[1] (Provided context)\n[2] Liu, X., Zhou, W., Li, H., & Guan, J. (2023). Tunable Thermoresponsive, Thermochromic and Stretchable P(HPA-co-AM)/hydroxypropyl cellulose/Lithium Chloride Hydrogel with Noncovalent Interaction for Information Encryption and Multifunctional Sensing Applications. Macromolecular Rapid Communications, 54(9), 1326-1337. https://doi.org/10.1002/marc.202201584.\n[3] (New context)",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.01968528680643497
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.019442538546154214
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.014876357130603143
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.009804863981543784
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.00975818735719726
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.00975609756097561
+    },
+    {
+      "title": "High-strength alginate fibers wet-spun from pre-crosslinked sodium alginate solutions",
+      "score": 0.009686649779529037
+    },
+    {
+      "title": "Tunable thermoresponsive and stretchable hydrogel sensor based on hydroxypropyl cellulose for human motion/health detection, visual signal transmission and information encryption",
+      "score": 0.009686649779529037
+    },
+    {
+      "title": "Dynamic Near-Infrared Circularly Polarized Luminescence Encoded by Transient Supramolecular Chiral Assemblies",
+      "score": 0.009638610182088444
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.6923076923076923,
+    "contextual_relevancy": 0.7
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:47:00.197Z"
+  },
+  "generated_queries": [
+    " 1) \"Biomimetic polymers: How do natural materials increase durability upon repeated biomechanical stress?\"",
+    "2) \"Mechanically responsive biopolymers: Which biological structures exhibit enhanced robustness under cyclic loading?\"",
+    "3) \"Polymeric systems inspired by nature: How do specific biological adaptations improve material resilience through mechanical stimuli?\"",
+    "How can we create polymeric systems that enhance durability through repeated mechanical stimuli?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afbf5d6adbae553295d2c1"
+  },
+  "query": "What are potential applications for materials that can grow stronger with use, inspired by natural processes?",
+  "response": " Materials that grow stronger or exhibit unique properties with use, inspired by natural processes, hold significant potential in various emerging fields, particularly in developing advanced materials and structures. One such example comes from the unique structure of human skin, which exhibits both elasticity and toughness through a gradient microstructure and interlocking collagen fibers. Another inspiration comes from nature's ability to create biodegradable materials with high mechanical strength, like sodium alginate, a biomass polysaccharide.\n\nTraditionally, the limited mechanical strength of alginate fibers has restricted their usage in load-bearing fabrics and reinforcement fibers due to their disentanglement at high stretches. However, recent advancements have led to the preparation of alginate multifilaments using pre-crosslinked sodium alginate solutions. This strategy effectively hinders the disentanglement of sodium alginate chains at high stretches, leading to an increase in shear viscosity and facilitating the high alignment and orientation of sodium alginate chains. The resultant fibers exhibit exceptional properties, including a breaking strength of 474 MPa, elongation at break of 16%, Young's modulus of 14.4 GPa, and toughness of 51.8 MJ/m3.\n\nIn the field of adaptive materials, researchers are designing polymorphic elasto-plastic crystals that display morphology-dependent photomechanical motions. These crystals exhibit dual plasticity and elasto-plasticity along different facets due to slidable separating layers, making them multi-stimuli-responsive. The crystal Form I retains its elastic bending ability even after being plastically twisted, owing to the well-maintained strong π--π interactions, while Form II cannot twist without fractures.\n\nThe photomechanical motions of Form I, including jumping, twisting to bending, are realized by adjusting the crystal morphologies. In contrast, Form II is lacking in response to ultraviolet light irradiation. Theoretical calculation analysis reveals that lattice deformation induced by photoisomerization of Form I is the driving forces for crystal motions. Additionally, reversible luminescence switching behaviors are realized in Form I and Form II upon acid-base fumigation as well as heating.\n\nThese synergistic multi-stimuli-responsive materials based on heat, acid, and solvent stimuli provide an alternative path for multi-mode information encryption. In biomedical engineering, the development of alginate multifilaments could lead to advancements in tissue engineering and regenerative medicine applications, such as scaffolds for cartilage and bone tissue repair. In energy storage, these materials could be used to create advanced batteries with improved mechanical properties and durability. In environmental sensing, humidity-responsive materials like the PES-PI/PDMS composite surface could be employed in sensors for monitoring temperature and humidity levels. In information encryption applications, responsive luminescent materials based on dynamic interface-anchored borate nanoassemblies could provide a platform for developing self-healable, photoresponsive encryption systems with superior mechanical performances and functional recovery capabilities.",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.019878048780487805
+    },
+    {
+      "title": "Dual-Responsive MXene-Functionalized Wool Yarn Artificial Muscles",
+      "score": 0.01480461768825774
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.014565166301638382
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009828543829992755
+    },
+    {
+      "title": "Heavy atom effect boosts the achievement of ultra-efficient long afterglow room temperature phosphorescent carbon point composites: An enhanced approach",
+      "score": 0.009807692307692309
+    },
+    {
+      "title": "High-strength alginate fibers wet-spun from pre-crosslinked sodium alginate solutions",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Self-Repairing Humidity-Adjustable Anisotropic Adhesion Switch for Smart Manipulation",
+      "score": 0.00978281668580176
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.009732878658709861
+    },
+    {
+      "title": "Photoinduced Multimodal Motions and Reversible Fluorescence Switching in an Elasto-Plastic Crystal",
+      "score": 0.009685286806434969
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.4666666666666667,
+    "contextual_relevancy": 0.9
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:50:21.032Z"
+  },
+  "generated_queries": [
+    " 1. \"Materials mimicking muscle growth: How do biological systems strengthen over time?\"",
+    "2. \"Biomimicry of self-reinforcing structures in nature: Which materials exhibit growth in response to stress?\"",
+    "3. \"Inspired by natural healing processes, what materials enhance their properties through repeated use?\"",
+    "What are potential applications for materials that can grow stronger with use, inspired by natural processes?"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66afc0276adbae553295d2c5"
+  },
+  "query": "How can engineered hydrogels be designed to mimic the self-repairing capabilities of living organisms?",
+  "response": " Engineered hydrogels designed to mimic the self-repairing capabilities of living organisms can be achieved through a combination of strategies inspired by nature and advanced materials science. One approach is to create bilayer gradient hydrogels, which draw inspiration from the unique structure and properties of human skin. This fabrication process involves a synergistic combination of ion diffusion-induced and strong-weak topological crosslinking.\n\nThe initial step employs Zn2+ ions to form weak bonds, imparting elasticity on the gel. Subsequently, Fe3+/Zn2+ diffusion constructs a strong-weak topologically crosslinked network, enhancing the hydrogel's toughness while minimizing brittleness associated with robust bonds. This design offers adaptive energy dissipation strategies for handling both large and small stresses.\n\nMoreover, responsive luminescent materials found in jellyfish provide additional insights for creating self-healable hydrogels. Nanocomposites featuring reversible interfacial bonding between nanoassemblies and the polymer matrix, coupled with their nanoconfinement effect, endow the materials with excellent mechanical performances and superior recovery capacities after damage.\n\nSelf-cleaning surfaces, inspired by nature, are another relevant area of research in material science. These surfaces, found on butterfly wings and lotus leaves, have applications in various industries, including petroleum technologies for separating oil and water. Hydrophilic and hydrophobic surfaces are the two primary categories of self-cleaning surfaces, each with distinct advantages.\n\nOn hydrophilic surfaces, water spreads considerably (sheeting of water), enabling the transport of contaminants and leaving a clean surface. In contrast, hydrophobic surfaces are cleaned by the slipping of water droplets on them. The design and selection of self-cleaning surfaces require a thorough understanding of their underlying physical chemistry, which is crucial for industrial applications in petroleum technologies.\n\nIn conclusion, engineered hydrogels can be designed to mimic the self-repairing capabilities of living organisms by employing a combination of strategies inspired by nature and advanced materials science. The fabrication process for bilayer gradient hydrogels provides elasticity, toughness, responsiveness to external stimuli, and programmable design in a single hydrogel system. Additionally, self-cleaning surfaces, which draw inspiration from the unique characteristics of natural systems, offer significant value in various industries, including petroleum technologies for oil-water separation.",
+  "context_source": [
+    {
+      "title": "Mechanoresponsive self-growing hydrogels inspired by muscle training",
+      "score": 0.019950248756218904
+    },
+    {
+      "title": "Ultra-adherable dual-network conductive hydrogel with moistening and anti-freezing as a flexible sensor",
+      "score": 0.019660148141510986
+    },
+    {
+      "title": "Somatosensory actuators based on light-responsive anisotropic hydrogel for storage encryption of information systems",
+      "score": 0.019561890230324154
+    },
+    {
+      "title": "Multi-stimuli-responsive conductive and luminescent hydrogels for wearable sensors and information encryption transmission",
+      "score": 0.019513830636427726
+    },
+    {
+      "title": "Cellulose nanocrystals-based optical organohydrogel fiber with customizable iridescent colors for strain and humidity response",
+      "score": 0.01485220954053263
+    },
+    {
+      "title": "Tunable thermoresponsive and stretchable hydrogel sensor based on hydroxypropyl cellulose for human motion/health detection, visual signal transmission and information encryption",
+      "score": 0.014564022024044868
+    },
+    {
+      "title": "Bioinspiration and Biomimetic Art in Robotic Grippers",
+      "score": 0.009852455833818677
+    },
+    {
+      "title": "Bilayer Gradient Hydrogel with Topological Crosslinking for High-Sensitivity Tactile Perception and Information Encryption",
+      "score": 0.009804157154872041
+    },
+    {
+      "title": "Jellyfish-Inspired Self-Healing Luminescent Elastomers Based on Borate Nanoassemblies for Dual-Model Encryption",
+      "score": 0.00970896665488394
+    },
+    {
+      "title": "Natural and synthetic superhydrophobic surfaces: A review of the fundamentals, structures, and applications",
+      "score": 0.00959238130290762
+    }
+  ],
+  "evaluation_scores": {
+    "answer_relevancy": 1,
+    "faithfulness": 0.5384615384615384,
+    "contextual_relevancy": 0.5
+  },
+  "timestamp": {
+    "$date": "2024-08-04T19:53:43.967Z"
+  },
+  "generated_queries": [
+    " 1. \"Biomimetic design of self-healing hydrogels: What natural processes inspire healing in biological tissues?\"",
+    "2. \"Self-regenerating hydrogels: How do living organisms repair damaged tissue and how can we replicate this process?\"",
+    "3. \"Biologically inspired hydrogels: What mechanisms enable self-repair in natural systems and how can they be engineered into hydrogels?\"",
+    "How can engineered hydrogels be designed to mimic the self-repairing capabilities of living organisms?"
+  ]
+}]

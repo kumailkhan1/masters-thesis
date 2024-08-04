@@ -2,9 +2,7 @@ from llama_index.core import QueryBundle
 from llama_index.core.schema import NodeWithScore
 from llama_index.core.retrievers import BaseRetriever
 from typing import List
-from backend.llm import fuse_results, generate_queries
-from evaluation.deep_eval import deep_evaluate
-from evaluation.tonic_validate import store_and_upload_results
+from retrievers.utils.utils import fuse_results, generate_queries
 
 import asyncio
 
@@ -26,6 +24,7 @@ class FusionRetriever(BaseRetriever):
         super().__init__()
         
     async def run_queries(self,queries, retrievers):
+        print("Running Queries...")
         tasks = []
         for query in queries:
             for retriever in retrievers:
@@ -40,7 +39,7 @@ class FusionRetriever(BaseRetriever):
         return results_dict
 
     def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
-        print("Insiude _retrieve")
+        print("Inside _retrieve")
         if(not self.generate_queries_flag):
             self.generated_queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=6)
             print(self.generated_queries)
@@ -49,14 +48,13 @@ class FusionRetriever(BaseRetriever):
         return final_results
     
     async def _aretrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
-        print("Insiude _aretrieve")
+        print("Running Retrieval _aretrieve()...")
         print("Query Generation: ", self.generate_queries_flag)
         
         if(self.generate_queries_flag):
             # Generate additional queries with the help of llm
             queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
             self.generated_queries = queries  # Store generated queries
-            print(self.generated_queries)
             results =  await self.run_queries(self.generated_queries, self._retrievers)
             final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
         else:

@@ -1,11 +1,15 @@
 
-from llama_index.core import (Settings, PromptTemplate,)
+from llama_index.core import (Settings, PromptTemplate)
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.llms.ollama import Ollama
 
-from backend.retrievers import FusionRetriever
-from backend.retrievers.utils.utils import generate_response_cr, get_or_build_index
+from evaluation.deep_eval import deep_evaluate
+from evaluation.tonic_validate import tonic_evaluate
+from retrievers.FusionRetriever import FusionRetriever
+from retrievers.utils.strategy.create_and_refine import generate_response_cr
+from retrievers.utils.strategy.hierarchical_summarization import agenerate_response_hs
+from retrievers.utils.utils import get_or_build_index
 import config
 
 async def query_llm(query_str):
@@ -17,20 +21,24 @@ async def query_llm(query_str):
     vector_retriever = index.as_retriever(similarity_top_k=10)
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10)
 
+    
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = True)
+        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=10, generate_queries_flag = True)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
+    print("Fusing Results done")
     qa_prompt = PromptTemplate(config.QA_PROMPT)
     refine_prompt = PromptTemplate(config.REFINE_PROMPT)
-    response, fmt_prompts = await generate_response_cr(retrieved_nodes, query_str, qa_prompt, refine_prompt, Settings.llm)
+    # response, fmt_prompts = await agenerate_response_hs(retrieved_nodes, query_str, qa_prompt, Settings.llm,num_children=10) # async Hierarchical summarization
+    response, fmt_prompts = await generate_response_cr(retrieved_nodes, query_str, qa_prompt, refine_prompt, Settings.llm) #Create and Refine
     
     print("Generated Queries", fusion_retriever.generated_queries)
     print("Running evaluation...")
-    # Store and upload evaluation results
-    # await store_and_upload_results(query_str, str(response), retrieved_nodes)
     
-    # await deep_evaluate(query_str,str(response),retrieved_nodes,fusion_retriever.generated_queries,"results")
+    # Store and upload evaluation results
+    
+    # await tonic_evaluate(query_str, str(response), retrieved_nodes) # TonicValidate
+    await deep_evaluate(query_str,str(response),retrieved_nodes,fusion_retriever.generated_queries,"comparison_retrieval_strategies") #DeepEval
     
     # Extract metadata and score from retrieved_nodes (TODO: Create sep. function)
     extracted_data = []
