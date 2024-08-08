@@ -1,8 +1,14 @@
 
+import os
+import sys
 from typing import List
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+# Add the parent directory of the current file to the sys.path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from llm import query_llm
 
 app = FastAPI()
