@@ -12,7 +12,7 @@ from retrievers.utils.strategy.hierarchical_summarization import agenerate_respo
 from retrievers.utils.utils import get_or_build_index
 import config
 
-async def query_llm(query_str):
+async def query_llm(query_str,generate_queries_flag=True):
     Settings.llm = Ollama(model="mistral", request_timeout=60.0)
     Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
     index = await get_or_build_index(embed_model=Settings.embed_model)
@@ -23,7 +23,7 @@ async def query_llm(query_str):
 
     
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=10, generate_queries_flag = True)
+        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=10, generate_queries_flag = generate_queries_flag)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
     print("Fusing Results done")
@@ -37,8 +37,8 @@ async def query_llm(query_str):
     
     # Store and upload evaluation results
     
-    # await tonic_evaluate(query_str, str(response), retrieved_nodes) # TonicValidate
-    await deep_evaluate(query_str,str(response),retrieved_nodes,fusion_retriever.generated_queries,"comparison_retrieval_strategies") #DeepEval
+    # # await tonic_evaluate(query_str, str(response), retrieved_nodes) # TonicValidate
+    # await deep_evaluate(query_str,str(response),retrieved_nodes,fusion_retriever.generated_queries,"comparison_retrieval_strategies") #DeepEval
     
     # Extract metadata and score from retrieved_nodes (TODO: Create sep. function)
     extracted_data = []

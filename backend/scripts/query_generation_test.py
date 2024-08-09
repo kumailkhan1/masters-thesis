@@ -1,22 +1,15 @@
 import os
 import json
-
 import pandas as pd
-
 
 # Get the current working directory and navigate accordingly
 current_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(current_dir, '..', 'data')
 
-file_with_papers = os.path.join(data_dir, 'llm_evaluation.Query_Generation_Experiment.json')
-# file_without_papers = os.path.join(data_dir, 'llm_evaluation.RetrievalExperiment_without_papers.json')
-
 # Load the data
-with open(file_with_papers, 'r',encoding='utf-8') as f:
+file_path = os.path.join(data_dir, 'llm_evaluation.Query_Generation_Experiment.json')
+with open(file_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
-
-# with open(file_without_papers, 'r',encoding='utf-8') as f:
-#     data_without_papers = json.load(f)
 
 # Define the mapping of papers to queries
 paper_query_mapping = {
@@ -33,28 +26,7 @@ paper_query_mapping = {
         "How can swarm intelligence models mimic ant behavior for efficient resource routing in logistics?",
         "What biological principles can improve fault-tolerance in robotic systems inspired by ant trail maintenance?",
         "How can natural algorithms from ants inform the design of resilient communication networks?"
-    ],
-    # "Bioinspiration and Biomimetic Art in Robotic Grippers": [
-    #     "How can biomimetic gripper designs improve autonomous object manipulation in robotics?",
-    #     "What natural mechanisms can inform the development of adaptive robotic grippers for delicate tasks?",
-    #     "How can animal-inspired gripping techniques enhance robotic dexterity in manufacturing?",
-    #     "What materials and actuation methods from nature can optimize the efficiency of robotic grippers?",
-    #     "How can bioinspired grippers be utilized to improve automation in healthcare and service industries?"
-    # ],
-    # "Revealing the Dark Threads of the Cosmic Web": [
-    #     "How can biomimetic algorithms enhance the mapping of dark matter in the cosmic web?",
-    #     "What role does the intergalactic medium play in the structure of the cosmic web, according to new detection methods?",
-    #     "How can slime mold-inspired models help in understanding the distribution of dark matter?",
-    #     "What are the implications of shock-heating and ionization in cosmic web filaments for cosmological studies?",
-    #     "How does the new method for detecting cosmic web structures compare to traditional spectroscopy techniques in revealing hidden matter?"
-    # ],
-    # "Mechanoresponsive self-growing hydrogels inspired by muscle training": [
-    #     "How can synthetic materials emulate the adaptive growth and strengthening observed in biological tissues?",
-    #     "What principles from muscle adaptation can be applied to develop self-repairing materials?",
-    #     "How can we create polymeric systems that enhance durability through repeated mechanical stimuli?",
-    #     "What are potential applications for materials that can grow stronger with use, inspired by natural processes?",
-    #     "How can engineered hydrogels be designed to mimic the self-repairing capabilities of living organisms?"
-    # ]
+    ]
 }
 
 # Function to check if the relevant paper is found in the context source and return its position and evaluation scores
@@ -72,7 +44,8 @@ def check_paper_in_context(query, data, relevant_paper):
                         'answer_relevancy': item['evaluation_scores'].get('answer_relevancy', None),
                         'faithfulness': item['evaluation_scores'].get('faithfulness', None),
                         'contextual_relevancy': item['evaluation_scores'].get('contextual_relevancy', None),
-                        'query_generation_enabled': query_generation_enabled
+                        'query_generation_enabled': query_generation_enabled,
+                        'generated_queries': item['generated_queries']
                     })
     return results
 
@@ -80,15 +53,50 @@ final_results = []
 
 # Check each paper and its associated queries
 for paper, queries in paper_query_mapping.items():
+    paper_results = []
     for query in queries:
         results = check_paper_in_context(query, data, paper)
         final_results.extend(results)
+        paper_results.extend(results)
+
+    # Calculate averages for the paper
+    if paper_results:
+        df_paper = pd.DataFrame(paper_results)
+        avg_answer_relevancy_false = df_paper[df_paper['query_generation_enabled'] == False]['answer_relevancy'].mean()
+        avg_faithfulness_false = df_paper[df_paper['query_generation_enabled'] == False]['faithfulness'].mean()
+        avg_contextual_relevancy_false = df_paper[df_paper['query_generation_enabled'] == False]['contextual_relevancy'].mean()
+
+        avg_answer_relevancy_true = df_paper[df_paper['query_generation_enabled'] == True]['answer_relevancy'].mean()
+        avg_faithfulness_true = df_paper[df_paper['query_generation_enabled'] == True]['faithfulness'].mean()
+        avg_contextual_relevancy_true = df_paper[df_paper['query_generation_enabled'] == True]['contextual_relevancy'].mean()
+
+        final_results.append({
+            'query': 'Average Scores for Paper (Query Gen False)',
+            'paper_title': paper,
+            'position_with_paper': None,
+            'answer_relevancy': avg_answer_relevancy_false,
+            'faithfulness': avg_faithfulness_false,
+            'contextual_relevancy': avg_contextual_relevancy_false,
+            'query_generation_enabled': False,
+            'generated_queries': None
+        })
+
+        final_results.append({
+            'query': 'Average Scores for Paper (Query Gen True)',
+            'paper_title': paper,
+            'position_with_paper': None,
+            'answer_relevancy': avg_answer_relevancy_true,
+            'faithfulness': avg_faithfulness_true,
+            'contextual_relevancy': avg_contextual_relevancy_true,
+            'query_generation_enabled': True,
+            'generated_queries': None
+        })
 
 # Convert the results to a DataFrame
 df_results = pd.DataFrame(final_results)
 
 # Save the results to a CSV file
-output_file = os.path.join(current_dir, '..', 'data', 'query_generation_experiment_results.csv')
+output_file = os.path.join(current_dir, '..', 'data', 'query_generation_experiment_results_with_averages.csv')
 df_results.to_csv(output_file, index=False)
 
 print(f"Analysis results have been saved to {output_file}")
