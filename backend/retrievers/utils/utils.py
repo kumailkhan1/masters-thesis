@@ -54,7 +54,7 @@ def fuse_results(results_dict, similarity_top_k):
     print("Fusing results...")
     # for 4 queries total of 80 documents (if top k = 10 for both retrievers) from both the retrievers would be returned so the max_rank would be 80
     # settings k = max_rank so it is easier to interpret
-    k = 200
+    k = 80
     fused_scores = {}
     text_to_node = {}
     try:
@@ -68,7 +68,12 @@ def fuse_results(results_dict, similarity_top_k):
                 if text not in fused_scores:
                     fused_scores[text] = 0.0
                 fused_scores[text] += 1.0 / (rank + k)
-
+                
+        # # Normalize the scores to ensure they stay within 0-1
+        # max_score = max(fused_scores.values(), default=1)
+        # for text in fused_scores:
+        #     fused_scores[text] /= max_score  # Normalize to 0-1 range
+            
         reranked_results = dict(
             sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
         )
