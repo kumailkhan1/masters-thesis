@@ -19,7 +19,7 @@ async def query_llm(query_str,generate_queries_flag=True):
     index = await get_or_build_index(embed_model=Settings.embed_model)
 
     query_gen_prompt = PromptTemplate(config.QUERY_GEN_PROMPT)
-    vector_retriever = index.as_retriever(similarity_top_k=10, verbose=True,vector_store_query_mode = VectorStoreQueryMode.SEMANTIC_HYBRID)
+    vector_retriever = index.as_retriever(similarity_top_k=10, verbose=True)
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10, verbose=True)
 
     
