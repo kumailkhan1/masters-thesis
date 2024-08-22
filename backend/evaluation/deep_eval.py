@@ -23,7 +23,7 @@ async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,tab
             threshold=0.6,
             model=EVAL_MODEL,
             include_reason=True,
-            verbose_mode=True
+            verbose_mode=False
         )
         #The faithfulness metric measures the quality of your RAG pipeline's generator by evaluating whether 
         # the actual_output factually aligns with the contents of your retrieval_context. 
@@ -31,7 +31,7 @@ async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,tab
             threshold=0.6,
             model=EVAL_MODEL,
             include_reason=True,
-            verbose_mode=True
+            verbose_mode=False
         )
         # The contextual relevancy metric measures the quality of your RAG pipeline's retriever by evaluating 
         # the overall relevance of the information presented in your retrieval_context for a given input
@@ -39,7 +39,7 @@ async def deep_evaluate(query_str,response,retrieved_nodes,generated_queries,tab
             threshold=0.6,
             model=EVAL_MODEL,
             include_reason=True,
-            verbose_mode=True
+            verbose_mode=False
         )
         without_context_test_case = LLMTestCase(
             input=query_str,

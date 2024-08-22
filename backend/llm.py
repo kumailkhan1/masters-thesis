@@ -1,5 +1,6 @@
 
 from llama_index.core import (Settings, PromptTemplate)
+from llama_index.core.vector_stores.types import VectorStoreQueryMode
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.llms.ollama import Ollama
@@ -18,12 +19,12 @@ async def query_llm(query_str,generate_queries_flag=True):
     index = await get_or_build_index(embed_model=Settings.embed_model)
 
     query_gen_prompt = PromptTemplate(config.QUERY_GEN_PROMPT)
-    vector_retriever = index.as_retriever(similarity_top_k=10)
-    bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10)
+    vector_retriever = index.as_retriever(similarity_top_k=10,alpha=0.6, verbose=True,vector_store_query_mode = VectorStoreQueryMode.SEMANTIC_HYBRID)
+    bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10,alpha=0.4, verbose=True)
 
     
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=10, generate_queries_flag = generate_queries_flag)
+        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = generate_queries_flag)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
     print("Fusing Results done")
