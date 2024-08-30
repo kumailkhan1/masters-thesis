@@ -39,7 +39,7 @@ class QueryResponse(BaseModel):
 async def handle_query(request: QueryRequest):
     query = request.query
     try:
-        data = await query_llm(query)
+        data = await query_llm(query,generate_queries_flag=False)
         return data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -22,9 +22,8 @@ async def query_llm(query_str,generate_queries_flag=True):
     vector_retriever = index.as_retriever(similarity_top_k=10, verbose=True)
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10, verbose=True)
 
-    
     fusion_retriever = FusionRetriever(
-        Settings.llm, query_gen_prompt, [vector_retriever, bm25_retriever], similarity_top_k=5, generate_queries_flag = generate_queries_flag)
+        Settings.llm, query_gen_prompt, [bm25_retriever,vector_retriever], similarity_top_k=5, generate_queries_flag = generate_queries_flag)
     retrieved_nodes = await fusion_retriever.aretrieve(query_str)
     
     print("Fusing Results done")
@@ -52,7 +51,7 @@ async def query_llm(query_str,generate_queries_flag=True):
         })
         
     data = {
-        "response":str(response),
+        "response":str("nothing"),
         "retrieved_nodes":retrieved_nodes, #extracted_data,
         "generated_queries":fusion_retriever.generated_queries
     }

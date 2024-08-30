@@ -6,7 +6,7 @@ def save_results(query_str,response,retrieved_nodes_titles,metrics_scores,genera
     
     # MongoDB setup
     client = MongoClient('mongodb://localhost:27017/')
-    db = client['llm_evaluation']
+    db = client['Benchmark']
     collection = db[table_name]
     # Store results in MongoDB
     result_data = {

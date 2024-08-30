@@ -19,7 +19,7 @@ from llm import query_llm
 from evaluation.deep_eval import deep_evaluate
 
 # Defining the table name for storing results
-TABLE_NAME = "2_random_papers_experiment"
+TABLE_NAME = "3_random_papers_experiment"
 
 # Define the papers and their corresponding queries
 papers_queries = {
@@ -36,23 +36,24 @@ papers_queries = {
         # "Design a structure that can automatically adapt to changing loads.",
         # "Design of prosthetic limbs that need to adapt to different surfaces or forces."
     ],
-    "Sorption of oils by the nonliving biomass of a Salvinia sp.": [
-        "Hierarchical surfaces in nature for reducing fluid drag.",
-        "Natural models for creating superhydrophobic surfaces.",
+    "The salvinia paradox: superhydrophobic surfaces with hydrophilic pins for air retention under water": [
+        # "Hierarchical surfaces in nature for reducing fluid drag.",
+        # "Natural models for creating superhydrophobic surfaces.",
         "Create a surface coating that reduces drag and enhance buoyancy for boats.",
         # "Water-repellent coatings inspired by natural wax structures.",
         # "Hydrophobic biomaterials for energy-efficient surface applications."
     ],
     "A contribution to the functional analysis of the foot of the Tokay, Gekko gecko (Reptilia: Gekkonidae)": [
-        "Engineer a material that can stick to various surfaces repeatedly without losing its stickiness.",
-        "Development of synthetic gripping pads for vertical locomotion in robotics.",
-        "Nature-inspired sticky surfaces with improved resilience and versatility."
+        # "Engineer a material that can stick to various surfaces repeatedly without losing its stickiness.",
+        "Development of synthetic gripping hands for vertical movement in robots.",
+        # "Nature-inspired sticky surfaces with improved resilience and versatility."
     ],
     "Mechanoresponsive self-growing hydrogels inspired by muscle training": [
-        "What are potential applications for materials that can grow stronger with use.",
-        "Materials that fortify under cyclic mechanical influence.",
-        "Smart materials that self-strengthen in response to any force applied."
+        # "What are potential applications for materials that can grow stronger with use.",
+        "Design a material that can become stronger when force is applied",
+        # "Smart materials that self-strengthen in response to any force applied."
     ]
+    
 }
 
 # Async function to run the experiment
@@ -68,7 +69,7 @@ async def run_experiment(papers_queries):
                 print("="*10)
                 
                 # Run the query with Query Generation enabled
-                data = await query_llm(query, generate_queries_flag=False)
+                data = await query_llm(query, generate_queries_flag=True)
                 
                 # Extracting the response, retrieved nodes, and generated queries
                 response = data['response']

@@ -1,7 +1,7 @@
 from llama_index.core import QueryBundle
 from llama_index.core.schema import NodeWithScore
 from llama_index.core.retrievers import BaseRetriever
-from typing import List
+from typing import List, Dict
 from retrievers.utils.utils import generate_queries
 
 import asyncio
@@ -23,57 +23,60 @@ class FusionRetriever(BaseRetriever):
         self.generated_queries = []
         super().__init__()
         
-    def fuse_results(results_dict, similarity_top_k):
-        print("Fusing results...")
-        """
-        Apply reciprocal rank fusion.
+    def normalize_scores(self, nodes_with_scores: List[NodeWithScore]) -> List[NodeWithScore]:
+        if not nodes_with_scores:
+            return []
+        
+        min_score = min(node.score or 0 for node in nodes_with_scores)
+        max_score = max(node.score or 0 for node in nodes_with_scores)
+        
+        if max_score == min_score:
+            return nodes_with_scores
+        
+        for node in nodes_with_scores:
+            if node.score is not None:
+                node.score = (node.score - min_score) / (max_score - min_score)
+        
+        return nodes_with_scores
 
-        The original paper uses k=60 for best results:
-        https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf
-        """
-        k = 60.0  # `k` is a parameter used to control the impact of outlier rankings.
-        fused_scores = {}
-        text_to_node = {}
+    def fuse_results(self, results_dict: Dict[str, List[NodeWithScore]], similarity_top_k: int) -> List[NodeWithScore]:
+        print("Fusing results...")
+        k = 60.0
+        fused_scores: Dict[str, float] = {}
+        text_to_node: Dict[str, NodeWithScore] = {}
+
         try:
-            
-            for nodes_with_scores in results_dict.values():
-                for rank, node_with_score in enumerate(
-                    sorted(nodes_with_scores, key=lambda x: x.score or 0.0, reverse=True)
-                ):
+            for query, nodes_with_scores in results_dict.items():
+                normalized_nodes = self.normalize_scores(nodes_with_scores)
+                for rank, node_with_score in enumerate(sorted(normalized_nodes, key=lambda x: x.score or 0.0, reverse=True)):
                     text = node_with_score.node.get_content()
                     text_to_node[text] = node_with_score
                     if text not in fused_scores:
                         fused_scores[text] = 0.0
                     fused_scores[text] += 1.0 / (rank + k)
-                    
-            reranked_results = dict(
-                sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
-            )
+
+            reranked_results = sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
 
             reranked_nodes: List[NodeWithScore] = []
-            for text, score in reranked_results.items():
-                reranked_nodes.append(text_to_node[text])
-                reranked_nodes[-1].score = score
+            for text, score in reranked_results[:similarity_top_k]:
+                node = text_to_node[text]
+                node.score = score
+                reranked_nodes.append(node)
 
-            return reranked_nodes[:similarity_top_k]
+            return reranked_nodes
         except Exception as e:
-                print(f"Error occurred while Fusing Results: {e}")
+            print(f"Error occurred while Fusing Results: {e}")
+            return []
 
-
-        
-    async def run_queries(self,queries, retrievers):
+    async def run_queries(self, queries: List[str], retrievers: List[BaseRetriever]) -> Dict[str, List[NodeWithScore]]:
         print("Running Queries...")
-        tasks = []
+        results_dict: Dict[str, List[NodeWithScore]] = {}
         for query in queries:
+            query_results: List[NodeWithScore] = []
             for retriever in retrievers:
-                tasks.append(retriever.aretrieve(query))
-
-        task_results = await asyncio.gather(*tasks)
-
-        results_dict = {}
-        for query, query_result in zip(queries, task_results):
-            results_dict[query] = query_result
-
+                retrieved_nodes = await retriever.aretrieve(query)
+                query_results.extend(retrieved_nodes)
+            results_dict[query] = query_results
         return results_dict
 
     def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
@@ -91,14 +94,14 @@ class FusionRetriever(BaseRetriever):
         
         if(self.generate_queries_flag):
             # Generate additional queries with the help of llm
-            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=4)
+            queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=5)
             self.generated_queries = queries  # Store generated queries
             results =  await self.run_queries(self.generated_queries, self._retrievers)
-            final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
+            final_results = self.fuse_results(results, similarity_top_k=self._similarity_top_k)
         else:
             queries = [query_bundle.query_str]
             self.generated_queries = queries  # Store the main query
             results =  await self.run_queries(self.generated_queries, self._retrievers)
-            final_results = fuse_results(results, similarity_top_k=self._similarity_top_k)
+            final_results = self.fuse_results(results, similarity_top_k=self._similarity_top_k)
        
         return final_results
