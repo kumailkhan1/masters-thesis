@@ -5,9 +5,13 @@ from typing import List
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from dotenv import load_dotenv
 
-# Add the parent directory of the current file to the sys.path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Load environment variables from .env file
+load_dotenv()
+
+# Add the PYTHONPATH from the .env file
+sys.path.append(os.getenv("PYTHONPATH"))
 
 from llm import query_llm
 

@@ -1,10 +1,25 @@
+import os
 from llama_index.core import QueryBundle
 from llama_index.core.schema import NodeWithScore
 from llama_index.core.retrievers import BaseRetriever
 from typing import List, Dict
 from retrievers.utils.utils import generate_queries
+from llama_index.core.postprocessor.llm_rerank import LLMRerank
+from llama_index.postprocessor.cohere_rerank import CohereRerank
+from llama_index.core.postprocessor import SentenceTransformerRerank
 
+from dotenv import load_dotenv
+load_dotenv()
 import asyncio
+
+# api_key = os.environ["COHERE_API_KEY"]
+# postprocessor = CohereRerank(
+#     top_n=5, model="rerank-english-v2.0", api_key=api_key
+# )
+
+postprocessor = SentenceTransformerRerank(
+    model="cross-encoder/ms-marco-MiniLM-L-12-v2", top_n=5
+)
 
 class FusionRetriever(BaseRetriever):
     def __init__(
@@ -12,8 +27,9 @@ class FusionRetriever(BaseRetriever):
         llm,
         query_gen_prompt,
         retrievers: List[BaseRetriever],
-        similarity_top_k: int = 2,
-        generate_queries_flag = True
+        similarity_top_k: int = 5,
+        generate_queries_flag = True,
+        rerank_top_n: int = 5  # New parameter for reranking
     ) -> None:
         self._retrievers = retrievers
         self._similarity_top_k = similarity_top_k
@@ -21,6 +37,11 @@ class FusionRetriever(BaseRetriever):
         self.query_gen_prompt = query_gen_prompt
         self.generate_queries_flag = generate_queries_flag
         self.generated_queries = []
+        self.reranker = LLMRerank(
+            choice_batch_size=5,
+            top_n=rerank_top_n,
+            llm=llm  # Use the same LLM or a different one
+        )
         super().__init__()
         
     def normalize_scores(self, nodes_with_scores: List[NodeWithScore]) -> List[NodeWithScore]:
@@ -92,16 +113,22 @@ class FusionRetriever(BaseRetriever):
         print("Running Retrieval _aretrieve()...")
         print("Query Generation: ", self.generate_queries_flag)
         
-        if(self.generate_queries_flag):
+        if self.generate_queries_flag:
             # Generate additional queries with the help of llm
             queries = generate_queries(self.query_gen_prompt, self._llm, query_bundle.query_str, num_queries=5)
             self.generated_queries = queries  # Store generated queries
-            results =  await self.run_queries(self.generated_queries, self._retrievers)
-            final_results = self.fuse_results(results, similarity_top_k=self._similarity_top_k)
         else:
             queries = [query_bundle.query_str]
             self.generated_queries = queries  # Store the main query
-            results =  await self.run_queries(self.generated_queries, self._retrievers)
-            final_results = self.fuse_results(results, similarity_top_k=self._similarity_top_k)
-       
-        return final_results
+        
+        results = await self.run_queries(self.generated_queries, self._retrievers)
+        final_results = self.fuse_results(results, similarity_top_k=self._similarity_top_k)
+        
+        # Apply reranking
+        try:
+            reranked_results = postprocessor.postprocess_nodes(final_results, query_bundle)
+            return reranked_results
+        except ValueError as e:
+            print(f"Error during reranking: {e}")
+            # If reranking fails, return the fused results without reranking
+            return final_results

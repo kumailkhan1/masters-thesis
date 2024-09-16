@@ -16,12 +16,11 @@ def create_documents(df):
     documents = []
     for _, row in df.iterrows():
         metadata = row.drop('Abstract').to_dict()
-        doc = Document(text=row['Abstract'], metadata=metadata)
+        doc = Document(text=row['Abstract'],metadata=metadata)
         documents.append(doc)
     return documents
 
 async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_dir=config.DATA_DIR):
-    
 
     cwd = os.getcwd()
     data_path = os.path.join(cwd, data_dir)
