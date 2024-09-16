@@ -4,18 +4,12 @@ from llama_index.core.schema import NodeWithScore
 from llama_index.core.retrievers import BaseRetriever
 from typing import List, Dict
 from retrievers.utils.utils import generate_queries
-from llama_index.core.postprocessor.llm_rerank import LLMRerank
-from llama_index.postprocessor.cohere_rerank import CohereRerank
 from llama_index.core.postprocessor import SentenceTransformerRerank
 
 from dotenv import load_dotenv
 load_dotenv()
 import asyncio
 
-# api_key = os.environ["COHERE_API_KEY"]
-# postprocessor = CohereRerank(
-#     top_n=5, model="rerank-english-v2.0", api_key=api_key
-# )
 
 postprocessor = SentenceTransformerRerank(
     model="cross-encoder/ms-marco-MiniLM-L-12-v2", top_n=5
