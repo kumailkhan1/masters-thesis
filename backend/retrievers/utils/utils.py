@@ -2,6 +2,7 @@ import os
 from llama_index.core import (
     VectorStoreIndex, Document,
 )
+from llama_index.core.text_splitter import SentenceSplitter
 from llama_index.core.schema import NodeWithScore
 from llama_index.core import StorageContext, load_index_from_storage
 from typing import List
@@ -11,12 +12,16 @@ import config
 import chardet
 
 def create_documents(df):
-    df.drop(['Author full names', 'Author(s) ID', 'Page start', 'Page end', 'Page count'], axis=1, inplace=True)
     df = df[df['Abstract'] != '[No abstract available]']
     documents = []
     for _, row in df.iterrows():
-        metadata = row.drop('Abstract').to_dict()
-        doc = Document(text=row['Abstract'],metadata=metadata)
+        # metadata = row[['Title','Authors', 'DOI', 'Link', 'Author Keywords']].to_dict()
+        metadata = row[['Title','Authors',]].to_dict()
+        
+        doc = Document(text=row['Abstract'],
+                       metadata=metadata,)
+                    #    excluded_llm_metadata_keys=['Authors', 'DOI', 'Link', 'Author Keywords'], # excludes these cols from LLM response
+                    #    excluded_embed_metadata_keys=[['Authors', 'DOI', 'Link']]) # excludes these from embedding
         documents.append(doc)
     return documents
 
@@ -35,9 +40,19 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
         print("Creating an index...")
         df = pd.read_csv(data_path, header=0)
         documents = create_documents(df)
-        index = VectorStoreIndex.from_documents(
-            documents, embed_model=embed_model
-        )
+        try:
+            # Create a custom text splitter with a larger chunk size
+            text_splitter = SentenceSplitter(chunk_size=2048, chunk_overlap=100)
+            
+            index = VectorStoreIndex.from_documents(
+                documents,
+                embed_model=embed_model,
+                transformations=[text_splitter],
+                show_progress=True
+            )
+        except Exception as e:
+            print(f"Failed to create index: {e}")
+            index = None
         index.storage_context.persist(persist_dir=persist_index_path)
     else:
         print("Loading the index from storage...")
@@ -92,6 +107,4 @@ def fuse_results(results_dict, similarity_top_k):
         return reranked_nodes[:similarity_top_k]
     except Exception as e:
             print(f"Error occurred while Fusing Results: {e}")
-
-
 

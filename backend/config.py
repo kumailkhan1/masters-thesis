@@ -1,7 +1,7 @@
 import os
 
-PERSIST_DIR = "persisted_index_random_papers_experiment"
-DATA_DIR = "data/random_papers_experiment.csv"
+PERSIST_DIR = "data/persisted_index_senckenberg"
+DATA_DIR = "data/Senckenberg_Paper_Scopus_240618.csv"
 QUERY_GEN_PROMPT = """
 You are assisting in generating multiple search queries tailored for a Retrieval-Augmented Generation (RAG) system 
 that helps translate a user's query into biomimicry or biology-specific language. The user has no prior knowledge of 

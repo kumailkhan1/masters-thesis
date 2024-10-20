@@ -11,8 +11,13 @@ load_dotenv()
 import asyncio
 
 
+# postprocessor = SentenceTransformerRerank(
+#     model="cross-encoder/ms-marco-MiniLM-L-12-v2", top_n=5
+# )
+
+
 postprocessor = SentenceTransformerRerank(
-    model="cross-encoder/ms-marco-MiniLM-L-12-v2", top_n=5
+    model="mixedbread-ai/mxbai-rerank-large-v1", top_n=5
 )
 
 class FusionRetriever(BaseRetriever):
@@ -31,11 +36,6 @@ class FusionRetriever(BaseRetriever):
         self.query_gen_prompt = query_gen_prompt
         self.generate_queries_flag = generate_queries_flag
         self.generated_queries = []
-        self.reranker = LLMRerank(
-            choice_batch_size=5,
-            top_n=rerank_top_n,
-            llm=llm  # Use the same LLM or a different one
-        )
         super().__init__()
         
     def normalize_scores(self, nodes_with_scores: List[NodeWithScore]) -> List[NodeWithScore]:

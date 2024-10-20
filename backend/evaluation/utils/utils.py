@@ -7,7 +7,7 @@ def save_results(query_str, response, retrieved_nodes_titles, metrics_scores, ge
     
     # MongoDB setup
     client = MongoClient('mongodb://localhost:27017/')
-    db = client['Benchmark2']
+    db = client['MixedBread']
     collection = db[table_name]
 
     # Convert numpy float32 to native Python float
