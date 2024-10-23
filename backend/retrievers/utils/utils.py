@@ -11,17 +11,34 @@ import pandas as pd
 import config
 import chardet
 
-def create_documents(df):
+def filter_df(df):
+    initial_rows = df.shape[0]
     df = df[df['Abstract'] != '[No abstract available]']
+    word_counts = df['Abstract'].str.split().str.len()
+    mean = word_counts.mean()
+    std_dev = word_counts.std()
+    upper_threshold = mean + 3 * std_dev
+    
+    df = df[word_counts <= upper_threshold]
+    
+    df.reset_index(drop=True, inplace=True)
+    
+    print(f"Initial number of rows: {initial_rows}")
+    print(f"Number of rows after filtering based on 3 standard deviations: {df.shape[0]}")
+    
+    return df
+
+def create_documents(df):
+    df = filter_df(df)
     documents = []
     for _, row in df.iterrows():
         # metadata = row[['Title','Authors', 'DOI', 'Link', 'Author Keywords']].to_dict()
-        metadata = row[['Title','Authors',]].to_dict()
+        metadata = row[['Title','Authors','DOI']].to_dict()
         
         doc = Document(text=row['Abstract'],
-                       metadata=metadata,)
-                    #    excluded_llm_metadata_keys=['Authors', 'DOI', 'Link', 'Author Keywords'], # excludes these cols from LLM response
-                    #    excluded_embed_metadata_keys=[['Authors', 'DOI', 'Link']]) # excludes these from embedding
+                       metadata=metadata,
+                       excluded_llm_metadata_keys=['Authors', 'DOI'], # excludes these cols from LLM response
+                       excluded_embed_metadata_keys=['Authors', 'DOI']) # excludes these from embedding
         documents.append(doc)
     return documents
 
@@ -42,7 +59,7 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
         documents = create_documents(df)
         try:
             # Create a custom text splitter with a larger chunk size
-            text_splitter = SentenceSplitter(chunk_size=2048, chunk_overlap=100)
+            text_splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=0)
             
             index = VectorStoreIndex.from_documents(
                 documents,

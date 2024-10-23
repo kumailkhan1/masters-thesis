@@ -6,13 +6,11 @@ import os
 import sys
 import csv
 
-mixedbread_api_key = os.getenv('MXBAI_API_KEY')
-
 # Load environment variables from .env file
 load_dotenv()
-
 # Add the PYTHONPATH from the .env file
 sys.path.append(os.getenv("PYTHONPATH"))
+from retrievers.utils.utils import get_or_build_index
 
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
@@ -24,38 +22,36 @@ from llama_index.core.retrievers import QueryFusionRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from evaluation.utils.utils import save_results
-import config
-
-# Load environment variables from .env file
-load_dotenv()
-
-# Add the PYTHONPATH from the .env file
-sys.path.append(os.getenv("PYTHONPATH"))
 
 import config
 
-
+mixedbread_api_key = os.getenv('MXBAI_API_KEY')
 
 TABLE_NAMES = {
-    "bm25": "bm25_experiment_mxbai_with_reranker_results",
-    "vector": "vector_experiment_mxbai_with_reranker_results",
-    "hybrid": "hybrid_experiment_mxbai_with_reranker_results"
+    "bm25": "bm25_experiment_MiniLM_reranker_results",
+    "vector": "vector_experiment_MiniLM_reranker_results",
+    "hybrid": "hybrid_experiment_MiniLM_reranker_results"
 }
 
 async def setup_retrievers(index):
     bm25_retriever = BM25Retriever.from_defaults(docstore=index.docstore, similarity_top_k=10)
     vector_retriever = index.as_retriever(similarity_top_k=10)
     
+    # postprocessor = SentenceTransformerRerank(
+    #     model="mixedbread-ai/mxbai-rerank-large-v1", top_n=5
+    # )
+    
     postprocessor = SentenceTransformerRerank(
-        model="mixedbread-ai/mxbai-rerank-base-v1", top_n=5
-    )
+    model="cross-encoder/ms-marco-MiniLM-L-12-v2", top_n=5
+)
+
     
     retrievers = {
         "bm25": QueryFusionRetriever(
             [bm25_retriever],
             similarity_top_k=5,
-            num_queries=6,
-            mode="simple",
+            num_queries=5,
+            mode="reciprocal_rerank",
             use_async=True,
             verbose=True,
             query_gen_prompt=config.QUERY_GEN_PROMPT
@@ -63,8 +59,8 @@ async def setup_retrievers(index):
         "vector": QueryFusionRetriever(
             [vector_retriever],
             similarity_top_k=5,
-            num_queries=6,
-            mode="simple",
+            num_queries=5,
+            mode="reciprocal_rerank",
             use_async=True,
             verbose=True,
             query_gen_prompt=config.QUERY_GEN_PROMPT
@@ -72,7 +68,7 @@ async def setup_retrievers(index):
         "hybrid": QueryFusionRetriever(
             [vector_retriever, bm25_retriever],
             similarity_top_k=5,
-            num_queries=6,
+            num_queries=5,
             mode="reciprocal_rerank",
             use_async=True,
             verbose=True,
@@ -80,7 +76,7 @@ async def setup_retrievers(index):
         )
     }
     
-    return {name: RetrieverQueryEngine.from_args(retriever, node_postprocessors=[postprocessor]) for name, retriever in retrievers.items()}
+    return {name: RetrieverQueryEngine.from_args(retriever, node_postprocessors=[postprocessor],response_mode='no_text') for name, retriever in retrievers.items()}
 
 async def process_query(query_str, query_engines):
     results = {}
@@ -102,9 +98,8 @@ async def process_query(query_str, query_engines):
     return results
 
 async def main():
-    
-    
-    Settings.llm = Ollama(model="mistral", request_timeout=60.0)
+
+    Settings.llm = Ollama(model="mistral", request_timeout=60.0) # will be used for query generation
     # Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-large")
     Settings.embed_model = HuggingFaceEmbedding(model_name="mixedbread-ai/mxbai-embed-large-v1")
     # Settings.embed_model = MixedbreadAIEmbedding(api_key=mixedbread_api_key, model_name="mixedbread-ai/mxbai-embed-large-v1",prompt="Represent this sentence for searching relevant passages:")
@@ -118,11 +113,11 @@ async def main():
             title = row['Title']
             queries = [row[f'Query{i}'] for i in range(1, 6)]
 
-            logging.info(f"Processing {dataset_name} with title: {title}")
+            print(f"Processing {dataset_name} with title: {title}")
             
             # Set up the index for each dataset
             try:
-                persist_dir = f'data/benchmark/mixedbread_with_prompt_and_reranker/persisted_index_{dataset_name}'
+                persist_dir = f'data/benchmark/mixedbread/persisted_index_{dataset_name}'
                 index = await get_or_build_index(Settings.embed_model, persist_dir=persist_dir, data_dir=f'data/benchmark/{dataset_name}.csv')
 
                 retrievers = await setup_retrievers(index)

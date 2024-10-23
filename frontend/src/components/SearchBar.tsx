@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Oval } from 'react-loader-spinner';
-import { RetrievedNodes } from '../models/RetrievedNodes';
-
-interface LLMResponse {
-    response: string;
-    retrieved_nodes: RetrievedNodes[];
-}
-
+import LLMResponse from '../models/LLMResponse';
 
 
 const SearchBar: React.FC = () => {
@@ -17,27 +11,22 @@ const SearchBar: React.FC = () => {
     const [error, setError] = useState<string>('');
 
     const handleSearch = async () => {
-
         if (query.length !== 0) {
             setLoading(true);
             setResponse(null);
             setError('');
             try {
-                const res = await axios.post<LLMResponse>('http://localhost:8000/query',
-                    {
-                        query: query
-                    });
+                const res = await axios.post<LLMResponse>('http://localhost:8000/query', { query: query });
                 setResponse(res.data);
             } catch (error) {
                 console.error("Error fetching data", error);
+                setError('An error occurred while fetching the data.');
             } finally {
                 setLoading(false);
             }
-        }
-        else {
+        } else {
             setError('Please enter your query.')
         }
-
     };
 
     return (
@@ -51,16 +40,14 @@ const SearchBar: React.FC = () => {
                     onChange={(e) => setQuery(e.target.value)}
                     className='w-1/2 m-2 p-2 rounded-lg placeholder-gray-400 bg-gray-50 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-300'
                 />
-                <p className='text-red-500 m-2'>{error}</p>
                 <button
                     onClick={handleSearch}
                     className="px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-700 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
                     Search
                 </button>
-
             </div>
-
+            <p className='text-red-500 m-2'>{error}</p>
 
             <div className='flex flex-col items-center m-5'>
                 {loading && (
@@ -69,35 +56,24 @@ const SearchBar: React.FC = () => {
                     </div>
                 )}
                 {response && (
-                    <div className="text-left">
-                        <h3 className="font-bold">Response</h3>
-                        <p>{response.response}</p>
-                        <h3 className="font-bold">Sources</h3>
+                    <div className="text-left w-full">
+                        <h3 className="font-bold text-xl mb-2">Response</h3>
+                        <p className="mb-4">{response.response}</p>
+                        <h3 className="font-bold text-xl mb-2">Sources</h3>
                         <div className="space-y-4">
                             {response.retrieved_nodes.map((node, index) => (
                                 <div key={index} className="p-4 border rounded shadow-sm">
-                                    <ul className="list-disc pl-5">
-                                        {Object.entries(node.metadata).map(([key, value]) => {
-                                            if (key === 'Link') {
-                                                return (
-                                                    <li key={key}><strong>{key}: </strong><a href={value} className='text-blue-300'>Here</a></li>
-                                                )
-                                            }
-                                            return (<li key={key}><strong>{key}:</strong> {value}</li>)
-                                        }
-
-                                        )}
-                                    </ul>
-                                    <h4 className="font-bold">Score:</h4>
-                                    <p>{node.score}</p>
+                                    <h4 className="font-bold">{node.metadata.Title}</h4>
+                                    <p><strong>Authors:</strong> {node.metadata.Authors}</p>
+                                    <p><strong>DOI:</strong> {node.metadata.DOI}</p>
+                                    <p><strong>Excerpt:</strong> {node.metadata.text}</p>
+                                    <p><strong>Score:</strong> {node.score.toFixed(4)}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-
                 )}
             </div>
-
         </div>
     );
 };

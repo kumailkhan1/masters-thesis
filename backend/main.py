@@ -1,4 +1,3 @@
-
 import os
 import sys
 from typing import List
@@ -13,7 +12,7 @@ load_dotenv()
 # Add the PYTHONPATH from the .env file
 sys.path.append(os.getenv("PYTHONPATH"))
 
-from llm import query_llm
+from llm import query_llm, LLMResponse
 
 app = FastAPI()
 
@@ -29,21 +28,11 @@ app.add_middleware(
 class QueryRequest(BaseModel):
     query: str
 
-class RetrievedNode(BaseModel):
-    metadata: dict
-    score: float
-
-class QueryResponse(BaseModel):
-    response: str
-    retrieved_nodes: List[RetrievedNode]
-    generated_queries:List[str]
-
-
-@app.post("/query", response_model=QueryResponse)
+@app.post("/query", response_model=LLMResponse)
 async def handle_query(request: QueryRequest):
     query = request.query
     try:
-        data = await query_llm(query,generate_queries_flag=False)
+        data = await query_llm(query, generate_queries_flag=True)
         return data
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
