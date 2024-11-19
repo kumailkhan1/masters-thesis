@@ -48,11 +48,11 @@ async def get_or_build_index(embed_model, persist_dir=config.PERSIST_DIR, data_d
     data_path = os.path.join(cwd, data_dir)
     persist_index_path = os.path.join(cwd, persist_dir)
 
-    with open(data_path, 'rb') as file:
-        raw_data = file.read()
-        result = chardet.detect(raw_data)
-        encoding = result['encoding']
-    print(f"The detected encoding is: {encoding}")
+    # with open(data_path, 'rb') as file:
+    #     raw_data = file.read()
+    #     result = chardet.detect(raw_data)
+    #     encoding = result['encoding']
+    # print(f"The detected encoding is: {encoding}")
     if not os.path.exists(persist_index_path):
         print("Creating an index...")
         df = pd.read_csv(data_path, header=0)

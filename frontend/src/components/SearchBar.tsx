@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Oval } from 'react-loader-spinner';
 import LLMResponse from '../models/LLMResponse';
-
+import ReactMarkdown from 'react-markdown'
 
 const SearchBar: React.FC = () => {
     const [query, setQuery] = useState<string>('');
@@ -58,7 +58,9 @@ const SearchBar: React.FC = () => {
                 {response && (
                     <div className="text-left w-full">
                         <h3 className="font-bold text-xl mb-2">Response</h3>
-                        <p className="mb-4">{response.response}</p>
+                        <ReactMarkdown className="mb-4">{response.response}</ReactMarkdown>
+                        <h3 className="font-bold text-xl mb-2">Design Approach / Feasibility</h3>
+                        <ReactMarkdown className="mb-4">{response.design_approach}</ReactMarkdown>
                         <h3 className="font-bold text-xl mb-2">Sources</h3>
                         <div className="space-y-4">
                             {response.retrieved_nodes.map((node, index) => (

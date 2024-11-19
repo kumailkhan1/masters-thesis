@@ -1,0 +1,17 @@
+Chunk Size,Metrics,Base Rag
+128,mean_correctness_score,4.54
+128,mean_relevancy_score,0.99
+128,mean_faithfulness_score,0.98
+128,mean_context_similarity_score,0.886258
+256,mean_correctness_score,4.8
+256,mean_relevancy_score,0.98
+256,mean_faithfulness_score,1
+256,mean_context_similarity_score,0.959326
+512,mean_correctness_score,4.82
+512,mean_relevancy_score,0.84
+512,mean_faithfulness_score,0.97
+512,mean_context_similarity_score,0.819658
+1024,mean_correctness_score,4.775
+1024,mean_relevancy_score,0.76
+1024,mean_faithfulness_score,0.98
+1024,mean_context_similarity_score,0.8077
